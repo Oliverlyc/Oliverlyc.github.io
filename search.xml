@@ -3,6 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[php配置json文件]]></title>
+      <url>/2017/09/16/php%E9%85%8D%E7%BD%AEjson%E6%96%87%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<h2 id="php数组数据写入json文件"><a href="#php数组数据写入json文件" class="headerlink" title="php数组数据写入json文件"></a>php数组数据写入json文件</h2><blockquote>
+<p><code>&lt;?php</code><br>　　<code>$data = array</code><br>　　<code>$data[&#39;a&#39;] = &#39;test&#39;;</code><br>　　<code>$data[&#39;b&#39;] = &#39;abc&#39;;</code><br>　　<code>$json_string = json_encode($data);</code><br>　　//把PHP数组转化为json字符串<br>　　<code>file_put_contents(&#39;test.json&#39;,$json_string);</code><br>　　//写入文件<br><code>?&gt;</code>       </p>
+<h2 id="读取json文件数据到PHP变量中"><a href="#读取json文件数据到PHP变量中" class="headerlink" title="读取json文件数据到PHP变量中"></a>读取json文件数据到PHP变量中</h2><p><code>&lt;?php</code><br>　　<code>$json_string = file_get_content(&#39;test.json&#39;);</code><br>　　//读取文件<br>　　<code>$data = json_decode($json_string,true);</code><br>　　//把json字符串转换成PHP数组<br><code>?&gt;</code></p>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> Note </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> json </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Git常用命令]]></title>
       <url>/2017/09/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
       <content type="html"><![CDATA[<blockquote>

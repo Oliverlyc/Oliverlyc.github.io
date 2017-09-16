@@ -184,7 +184,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/json/">json</a></li></ul>
                     </div>
                 </section>
                 
@@ -262,6 +262,73 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-php配置json文件" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/09/16/php配置json文件/" class="article-date">
+      <time datetime="2017-09-16T08:21:25.000Z" itemprop="datePublished">2017-09-16</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/09/16/php配置json文件/">php配置json文件</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="php数组数据写入json文件"><a href="#php数组数据写入json文件" class="headerlink" title="php数组数据写入json文件"></a>php数组数据写入json文件</h2><blockquote>
+<p><code>&lt;?php</code><br>　　<code>$data = array</code><br>　　<code>$data[&#39;a&#39;] = &#39;test&#39;;</code><br>　　<code>$data[&#39;b&#39;] = &#39;abc&#39;;</code><br>　　<code>$json_string = json_encode($data);</code><br>　　//把PHP数组转化为json字符串<br>　　<code>file_put_contents(&#39;test.json&#39;,$json_string);</code><br>　　//写入文件<br><code>?&gt;</code>       </p>
+<h2 id="读取json文件数据到PHP变量中"><a href="#读取json文件数据到PHP变量中" class="headerlink" title="读取json文件数据到PHP变量中"></a>读取json文件数据到PHP变量中</h2><p><code>&lt;?php</code><br>　　<code>$json_string = file_get_content(&#39;test.json&#39;);</code><br>　　//读取文件<br>　　<code>$data = json_decode($json_string,true);</code><br>　　//把json字符串转换成PHP数组<br><code>?&gt;</code></p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Note/">Note</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Git常用命令" class="article article-type-post" itemscope itemprop="blogPost">
   
