@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
     <title>
         
-        Hello World｜Oliver&#39;s blog
+        Git常用命令｜Oliver&#39;s blog
         
     </title>
 
-    <link rel="canonical" href="http://Oliverlyc.github.io/2017/03/19/hello-world/">
+    <link rel="canonical" href="http://Oliverlyc.github.io/2017/09/16/Git常用命令/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -145,18 +145,21 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
                 <div class="post-heading">
-                    <h1>Hello World</h1>
+                    <h1>Git常用命令</h1>
                     
                     <span class="meta">
                          作者 Oliver Lin
                         <span>
-                          日期 2017-03-19
+                          日期 2017-09-16
                          </span>
                     </span>
                     <div class="tags text-center">
                         
-                        <a class="tag" href="/tags/#hexo"
-                           title="hexo">hexo</a>
+                        <a class="tag" href="/tags/#Note"
+                           title="Note">Note</a>
+                        
+                        <a class="tag" href="/tags/#Git"
+                           title="Git">Git</a>
                         
                     </div>
                 </div>
@@ -165,7 +168,7 @@
     </div>
     <div class="post-title-haojen">
         <span>
-            Hello World
+            Git常用命令
         </span>
     </div>
 </header>
@@ -176,26 +179,32 @@
         <div class="row">
             <!-- Post Container -->
             <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+                <blockquote>
+<p><code>$ git log</code><br>    //查看版本<br><code>$ pwd</code><br>    //显示当前目录         </p>
+</blockquote>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><blockquote>
+<p><code>$ mkdir &lt;repository name&gt;</code>//创建目录<br><code>$ git init</code>//将目录提交到暂存区(目录下会有一个.git文件夹)<br><code>$ git add &lt;file name&gt;</code>//将文件添加到仓库(可以添加多个)<br><code>$ git commit -m &quot;添加说明$&quot;</code>//提交到仓库<br><code>$ git status</code>//查看仓库状态<br><code>$ git diff</code>//查看修改   </p>
+</blockquote>
+<h2 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h2><blockquote>
+<p><code>$ git reset --hard HEAD^</code><br>    //回退到上一个版本<br><code>$ rm test.txt</code><br>    //删除工作区文件   </p>
+</blockquote>
+<h2 id="添加远程库"><a href="#添加远程库" class="headerlink" title="添加远程库"></a>添加远程库</h2><blockquote>
+<p><code>$ git remote add origin &lt;herf&gt;</code><br><code>$ git push (-u //远程库为空) origin master</code><br>    //推送本地库到远程</p>
+</blockquote>
+<h2 id="克隆"><a href="#克隆" class="headerlink" title="克隆"></a>克隆</h2><blockquote>
+<p><code>$ git clone &lt;herf&gt;</code></p>
+</blockquote>
 
                 <hr>
                 
 
                 <ul class="pager">
                     
-                    <li class="previous">
-                        <a href="/2017/09/16/Git常用命令/" data-toggle="tooltip" data-placement="top"
-                           title="Git常用命令">&larr; Previous Post</a>
-                    </li>
                     
+                    <li class="next">
+                        <a href="/2017/03/19/hello-world/" data-toggle="tooltip" data-placement="top"
+                           title="Hello World">Next Post &rarr;</a>
+                    </li>
                     
                 </ul>
 
@@ -210,7 +219,7 @@
 
             <div class="hidden-xs col-sm-3 toc-col">
                 <div class="toc-wrap">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建仓库"><span class="toc-text">创建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本"><span class="toc-text">版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加远程库"><span class="toc-text">添加远程库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#克隆"><span class="toc-text">克隆</span></a></li></ol>
                 </div>
             </div>
         </div>
@@ -232,8 +241,11 @@
                     </h5>
                     <div class="tags">
                         
-                        <a class="tag" href="/tags/#hexo"
-                           title="hexo">hexo</a>
+                        <a class="tag" href="/tags/#Note"
+                           title="Note">Note</a>
+                        
+                        <a class="tag" href="/tags/#Git"
+                           title="Git">Git</a>
                         
                     </div>
                 </section>
