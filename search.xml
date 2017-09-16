@@ -32,8 +32,10 @@
       <title><![CDATA[Git常用命令]]></title>
       <url>/2017/09/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
       <content type="html"><![CDATA[<blockquote>
-<p><code>$ git log</code><br>    //查看版本<br><code>$ pwd</code><br>    //显示当前目录<br><a id="more"></a></p>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p><code>$ mkdir &lt;repository name&gt;</code>//创建目录<br><code>$ git init</code>//将目录提交到暂存区(目录下会有一个.git文件夹)<br><code>$ git add &lt;file name&gt;</code>//将文件添加到仓库(可以添加多个)<br><code>$ git commit -m &quot;添加说明$&quot;</code>//提交到仓库<br><code>$ git status</code>//查看仓库状态<br><code>$ git diff</code>//查看修改   </p>
+<p><code>$ git log</code><br>    //查看版本<br><code>$ pwd</code><br>    //显示当前目录<br><a id="more"></a>        </p>
+</blockquote>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><blockquote>
+<p><code>$ mkdir &lt;repository name&gt;</code>//创建目录<br><code>$ git init</code>//将目录提交到暂存区(目录下会有一个.git文件夹)<br><code>$ git add &lt;file name&gt;</code>//将文件添加到仓库(可以添加多个)<br><code>$ git commit -m &quot;添加说明$&quot;</code>//提交到仓库<br><code>$ git status</code>//查看仓库状态<br><code>$ git diff</code>//查看修改   </p>
 </blockquote>
 <h2 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h2><blockquote>
 <p><code>$ git reset --hard HEAD^</code><br>    //回退到上一个版本<br><code>$ rm test.txt</code><br>    //删除工作区文件   </p>
