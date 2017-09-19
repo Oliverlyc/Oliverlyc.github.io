@@ -33,7 +33,7 @@
       
         <categories>
             
-            <category> Note </category>
+            <category> PHP </category>
             
         </categories>
         
@@ -41,6 +41,8 @@
         <tags>
             
             <tag> json </tag>
+            
+            <tag> PHP </tag>
             
         </tags>
         
