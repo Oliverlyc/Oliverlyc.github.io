@@ -3,6 +3,58 @@
   
     
     <entry>
+      <title><![CDATA[centOS解决'用户不在sudoers文件中']]></title>
+      <url>/2017/09/23/centOS%E8%A7%A3%E5%86%B3-%E7%94%A8%E6%88%B7%E4%B8%8D%E5%9C%A8sudoers%E6%96%87%E4%BB%B6%E4%B8%AD/</url>
+      <content type="html"><![CDATA[<p>在win10安装centos6.5的虚拟机<br>使用非root账号时，使用<code>sudo</code>命令出现如下警告:<br>    不在sudoers文件中,此事将被报告.<br>文件路径:<em>/etc/sudoers</em><br>解决方法:   </p>
+<blockquote>
+<ol>
+<li>使用<code>su</code>命令切换到root账号,调用CentOS自带的<code>visudo</code>命令添加账号     </li>
+<li>找到 <strong>root ALL=(ALL:ALL) ALL</strong> 并在下边添加自己的账号,<strong>name ALL=(ALL:ALL) ALL</strong>    </li>
+<li><code>:wq</code>保存后,即可使用<code>sudo</code>命令</li>
+</ol>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> Linux </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> sudo </tag>
+            
+            <tag> CentOS </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[CentOS6.5安装Metasploit]]></title>
+      <url>/2017/09/23/CentOS6-5%E5%AE%89%E8%A3%85Metasploit/</url>
+      <content type="html"></content>
+      
+        <categories>
+            
+            <category> 网络安全 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 渗透 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[数据库事务的4大特性]]></title>
       <url>/2017/09/19/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E7%9A%844%E5%A4%A7%E7%89%B9%E6%80%A7/</url>
       <content type="html"><![CDATA[<h2 id="1-原子性"><a href="#1-原子性" class="headerlink" title="1. 原子性"></a>1. <strong>原子性</strong></h2><pre><code>事务的所有操作,要么全部成功执行,要么全部失败,要么完全应用到数据库中,要么对数据库没有任何影响.   
