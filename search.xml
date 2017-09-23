@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[centOS解决'用户不在sudoers文件中']]></title>
       <url>/2017/09/23/centOS%E8%A7%A3%E5%86%B3-%E7%94%A8%E6%88%B7%E4%B8%8D%E5%9C%A8sudoers%E6%96%87%E4%BB%B6%E4%B8%AD/</url>
-      <content type="html"><![CDATA[<p>在win10安装centos6.5的虚拟机<br>使用非root账号时，使用<code>sudo</code>命令出现如下警告:<br>    不在sudoers文件中,此事将被报告.<br>文件路径:<em>/etc/sudoers</em><br>解决方法:   </p>
+      <content type="html"><![CDATA[<p>在win10安装centos6.5的虚拟机<br>使用非root账号时，使用<code>sudo</code>命令出现如下警告:<br>    不在sudoers文件中,此事将被报告.<br><a id="more"></a><br>文件路径:<em>/etc/sudoers</em><br>解决方法:   </p>
 <blockquote>
 <ol>
 <li>使用<code>su</code>命令切换到root账号,调用CentOS自带的<code>visudo</code>命令添加账号     </li>
