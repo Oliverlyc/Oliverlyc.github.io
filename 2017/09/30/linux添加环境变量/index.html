@@ -15,12 +15,28 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Oliver">
-<meta property="og:url" content="http://Oliverlyc.github.io/categories/Linux/index.html">
+<meta name="description" content="在Linux系统下,安装完应用程序之后,输入应用名称会提示”command not found“,为了避免每次都要打开文件夹执行程序,引入了环境变量,将路径添加到$PATH中     
+
+# vim ~/.bashrc   
+在最后一行加入 # PATH export PATH=路径:$PATH    
+保存退出执行命令 # source ~/.bashrc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux添加环境变量">
+<meta property="og:url" content="http://Oliverlyc.github.io/2017/09/30/linux添加环境变量/index.html">
 <meta property="og:site_name" content="Oliver">
+<meta property="og:description" content="在Linux系统下,安装完应用程序之后,输入应用名称会提示”command not found“,为了避免每次都要打开文件夹执行程序,引入了环境变量,将路径添加到$PATH中     
+
+# vim ~/.bashrc   
+在最后一行加入 # PATH export PATH=路径:$PATH    
+保存退出执行命令 # source ~/.bashrc">
+<meta property="og:updated_time" content="2017-09-30T09:24:25.650Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Oliver">
+<meta name="twitter:title" content="linux添加环境变量">
+<meta name="twitter:description" content="在Linux系统下,安装完应用程序之后,输入应用名称会提示”command not found“,为了避免每次都要打开文件夹执行程序,引入了环境变量,将路径添加到$PATH中     
+
+# vim ~/.bashrc   
+在最后一行加入 # PATH export PATH=路径:$PATH    
+保存退出执行命令 # source ~/.bashrc">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -52,7 +68,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Category: Linux | Oliver</title>
+<title>linux添加环境变量 | Oliver</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -62,10 +78,10 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
-        isCategory: true,
+        isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
         search: undefined
@@ -256,97 +272,173 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-linux添加环境变量" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/09/30/linux添加环境变量/" class="archive-article-date">
-      <time datetime="2017-09-30T09:08:58.000Z" itemprop="datePublished">09-30</time>
+    <div class="article-meta">
+      <a href="/2017/09/30/linux添加环境变量/" class="article-date">
+      <time datetime="2017-09-30T09:08:58.000Z" itemprop="datePublished">2017-09-30</time>
 </a>
 
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/30/linux添加环境变量/">linux添加环境变量</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux添加环境变量
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/Linux/">Linux</a>
     </div>
 
 
-          
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+      </div>
+      
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/09/23/centOS解决-用户不在sudoers文件中/" class="archive-article-date">
-      <time datetime="2017-09-23T15:48:05.000Z" itemprop="datePublished">09-23</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/23/centOS解决-用户不在sudoers文件中/">centOS解决&#39;用户不在sudoers文件中&#39;</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
+    <div class="article-entry" itemprop="articleBody">
+      
           
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+        <p>在Linux系统下,安装完应用程序之后,输入应用名称会提示”<strong>command not found</strong>“,为了避免每次都要打开文件夹执行程序,引入了环境变量,将路径添加到<strong>$PATH</strong>中     </p>
+<ol>
+<li><code># vim ~/.bashrc</code>   </li>
+<li>在最后一行加入<br> <code># PATH</code><br> <code>export PATH=路径:$PATH</code>    </li>
+<li>保存退出执行命令<br> <code># source ~/.bashrc</code></li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/09/30/linux添加环境变量/">linux添加环境变量</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Oliver Lin</a></p>
+        <p><span>发布时间:</span>2017-09-30, 17:08:58</p>
+        <p><span>最后更新:</span>2017-09-30, 17:24:25</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/09/30/linux添加环境变量/" title="linux添加环境变量">http://Oliverlyc.github.io/2017/09/30/linux添加环境变量/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://Oliverlyc.github.io/2017/09/30/linux添加环境变量/　　作者: Oliver Lin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sudo/">sudo</a></li></ul>
-    </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/09/23/centOS解决-用户不在sudoers文件中/">
+                    centOS解决&#39;用户不在sudoers文件中&#39;
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"linux添加环境变量　| Oliver　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
 
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/09/23/centOS解决-用户不在sudoers文件中/" title="下一篇: centOS解决&#39;用户不在sudoers文件中&#39;">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/linux添加环境变量/">linux添加环境变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/23/centOS解决-用户不在sudoers文件中/">centOS解决'用户不在sudoers文件中'</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/23/CentOS6-5安装Metasploit/">CentOS6.5安装Metasploit</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/19/数据库事务的4大特性/">数据库事务的4大特性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/16/php配置json文件/">php配置json文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/16/Git常用命令/">Git常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/19/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
