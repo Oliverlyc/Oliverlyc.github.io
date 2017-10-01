@@ -14,25 +14,16 @@
 <meta name="author" content="Oliver Lin" />
 
 
+    
+    
 
-<meta name="description" content="在CentOS 6.5 系统下,使用yum install php只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源已经安装过旧版本的请点击这里      
-第一步:安装remi库（如果输入vim /etc/yum.repos.d/remi.repo提示创建新文件,请看此步骤）     
-REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CentOS系统下安装指定版本的PHP">
-<meta property="og:url" content="http://Oliverlyc.github.io/2017/10/01/CentOS系统下安装指定版本的PHP/index.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Oliver">
+<meta property="og:url" content="http://Oliverlyc.github.io/page/2/index.html">
 <meta property="og:site_name" content="Oliver">
-<meta property="og:description" content="在CentOS 6.5 系统下,使用yum install php只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源已经安装过旧版本的请点击这里      
-第一步:安装remi库（如果输入vim /etc/yum.repos.d/remi.repo提示创建新文件,请看此步骤）     
-REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P">
-<meta property="og:image" content="http://ox5ha61h3.bkt.clouddn.com//install_php/install_php.png">
-<meta property="og:updated_time" content="2017-10-01T16:57:24.387Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS系统下安装指定版本的PHP">
-<meta name="twitter:description" content="在CentOS 6.5 系统下,使用yum install php只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源已经安装过旧版本的请点击这里      
-第一步:安装remi库（如果输入vim /etc/yum.repos.d/remi.repo提示创建新文件,请看此步骤）     
-REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P">
-<meta name="twitter:image" content="http://ox5ha61h3.bkt.clouddn.com//install_php/install_php.png">
+<meta name="twitter:title" content="Oliver">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -60,11 +51,13 @@ REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P"
 <link rel="stylesheet" href="/css/style.css">
 
 
+    <style> .article { opacity: 0;} </style>
+
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>CentOS系统下安装指定版本的PHP | Oliver</title>
+<title>Oliver</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -73,8 +66,8 @@ REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P"
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: false,
-        isPost: true,
+        isHome: true,
+        isPost: false,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -268,11 +261,13 @@ REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P"
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-CentOS系统下安装指定版本的PHP" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/10/01/CentOS系统下安装指定版本的PHP/" class="article-date">
-      <time datetime="2017-09-30T23:41:58.000Z" itemprop="datePublished">2017-10-01</time>
+      <a href="/2017/03/19/hello-world/" class="article-date">
+      <time datetime="2017-03-19T14:18:33.469Z" itemprop="datePublished">2017-03-19</time>
 </a>
 
 
@@ -286,146 +281,44 @@ REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P"
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      CentOS系统下安装指定版本的PHP
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/19/hello-world/">Hello World</a>
     </h1>
   
 
       </header>
       
-      <div class="article-info article-info-post">
-        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/PHP/">PHP</a>
-    </div>
-
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>在CentOS 6.5 系统下,使用<code>yum install php</code>只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源<br><a href="https://oliverlyc.github.io/2017/10/01/CentOS%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC%E7%9A%84PHP/#升级PHP"><strong>已经安装过旧版本的请点击这里</strong></a>      </p>
-<h2 id="第一步-安装remi库"><a href="#第一步-安装remi库" class="headerlink" title="第一步:安装remi库"></a>第一步:安装remi库</h2><p>（如果输入<code>vim /etc/yum.repos.d/remi.repo</code>提示创建新文件,请看此步骤）     </p>
-<p>REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的PHP/MySQL系列.<br>注：不要再启用REMI仓库的时候运行<code>yum update</code>,可能会触发意外的更新.<br><a id="more"></a>       </p>
-<p>在CentOS 6.x上:<br>    <code># sudo rpm --import http://rpms.famillecollet.com/RPM-GPG-KEY-remi</code><br>    <code># sudo rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm</code><br>在CentOS 7.x上:<br>    <code># sudo rpm --import http://rpms.famillecollet.com/RPM-GPG-KEY-remi</code><br>    <code># sudo rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm</code><br>使用<code># yum repolist disabled | grep remi</code>查看REMI仓库<br><img src="http://ox5ha61h3.bkt.clouddn.com//install_php/install_php.png" alt="img1">      </p>
-<h2 id="第二步-安装PHP"><a href="#第二步-安装PHP" class="headerlink" title="第二步:安装PHP"></a>第二步:安装PHP</h2><ol>
-<li>添加源<br>32位:<br> <code># wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.1-1.el5.rf.i386.rpm</code><br> <code># rpm -ivh rpmforge-release-0.5.1-1.el5.rf.i386.rpm</code><br>64位:<br> <code># wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.1-1.el5.rf.x86_64.rpm</code><br> <code># rpm -ivh rpmforge-release-0.5.1-1.el5.rf.x86_64.rpm</code> </li>
-<li>使用<code>yum install php(版本号)w</code>来安装PHP </li>
-</ol>
-<h2 id="升级PHP"><a href="#升级PHP" class="headerlink" title="升级PHP"></a>升级PHP</h2><ol>
-<li><code>yum remove php*</code>//删除旧版本PHP      </li>
-<li>返回第二步    </li>
-</ol>
-<h2 id="第三步-配置PHP"><a href="#第三步-配置PHP" class="headerlink" title="第三步:配置PHP"></a>第三步:配置PHP</h2><pre><code>vim /etc/php.ini    
-date.timezone = PRC #在946行 把前面的分号去掉，改为date.timezone = PRC   
-expose_php = Off #在432行 禁止显示php版本的信息
-magic_quotes_gpc = On #在745行 打开magic_quotes_gpc来防止SQL注入
-short_open_tag = ON #在229行支持php短标签
-:wq! #保存退出
-重启mysql,apache      
-</code></pre><h2 id="第四步-配置防火墙"><a href="#第四步-配置防火墙" class="headerlink" title="第四步:配置防火墙"></a>第四步:配置防火墙</h2><p>配置防火墙,开启80,3306端口 (<strong>注:将规则添加在默认22端口这条规则下面</strong>)   </p>
-<pre><code>vi /etc/sysconfig/iptables  
--A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT #允许80端口通过防火墙   
--A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT #允许3306端口通过防火墙   
-:wq #保存退出   
-</code></pre><p><code>/etc/init.d/iptables restart</code> //重启防火墙使配置生效</p>
+              <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2017/03/19/hello-world/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
     </div>
     
   </div>
   
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/10/01/CentOS系统下安装指定版本的PHP/">CentOS系统下安装指定版本的PHP</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Oliver Lin</a></p>
-        <p><span>发布时间:</span>2017-10-01, 07:41:58</p>
-        <p><span>最后更新:</span>2017-10-02, 00:57:24</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/10/01/CentOS系统下安装指定版本的PHP/" title="CentOS系统下安装指定版本的PHP">http://Oliverlyc.github.io/2017/10/01/CentOS系统下安装指定版本的PHP/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://Oliverlyc.github.io/2017/10/01/CentOS系统下安装指定版本的PHP/　　作者: Oliver Lin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
-
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/10/02/CentOS6-5搭建LAMP环境/">
-                    CentOS6.5搭建LAMP环境
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/09/30/linux添加环境变量/">
-                    linux添加环境变量
-                </a>
-            </div>
-        
-    </nav>
-
-  
 </article>
 
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步-安装remi库"><span class="toc-number">1.</span> <span class="toc-text">第一步:安装remi库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步-安装PHP"><span class="toc-number">2.</span> <span class="toc-text">第二步:安装PHP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#升级PHP"><span class="toc-number">3.</span> <span class="toc-text">升级PHP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三步-配置PHP"><span class="toc-number">4.</span> <span class="toc-text">第三步:配置PHP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第四步-配置防火墙"><span class="toc-number">5.</span> <span class="toc-text">第四步:配置防火墙</span></a></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
-        </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"CentOS系统下安装指定版本的PHP　| Oliver　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
 
 
 
@@ -433,35 +326,13 @@ short_open_tag = ON #在229行支持php短标签
 
 
 
-    
 
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2017/10/02/CentOS6-5搭建LAMP环境/" title="上一篇: CentOS6.5搭建LAMP环境">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2017/09/30/linux添加环境变量/" title="下一篇: linux添加环境变量">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/10/02/CentOS6-5搭建LAMP环境/">CentOS6.5搭建LAMP环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/01/CentOS系统下安装指定版本的PHP/">CentOS系统下安装指定版本的PHP</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/linux添加环境变量/">linux添加环境变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/23/centOS解决-用户不在sudoers文件中/">centOS解决'用户不在sudoers文件中'</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/23/CentOS6-5安装Metasploit/">CentOS6.5安装Metasploit</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/19/数据库事务的4大特性/">数据库事务的4大特性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/16/php配置json文件/">php配置json文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/16/Git常用命令/">Git常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/19/hello-world/">Hello World</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 </div>
       <footer id="footer">
     <div class="outer">

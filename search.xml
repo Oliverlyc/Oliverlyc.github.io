@@ -3,6 +3,14 @@
   
     
     <entry>
+      <title><![CDATA[CentOS6.5搭建LAMP环境]]></title>
+      <url>/2017/10/02/CentOS6-5%E6%90%AD%E5%BB%BALAMP%E7%8E%AF%E5%A2%83/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[CentOS系统下安装指定版本的PHP]]></title>
       <url>/2017/10/01/CentOS%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC%E7%9A%84PHP/</url>
       <content type="html"><![CDATA[<p>在CentOS 6.5 系统下,使用<code>yum install php</code>只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源<br><a href="https://oliverlyc.github.io/2017/10/01/CentOS%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC%E7%9A%84PHP/#升级PHP"><strong>已经安装过旧版本的请点击这里</strong></a>      </p>
@@ -23,8 +31,14 @@ expose_php = Off #在432行 禁止显示php版本的信息
 magic_quotes_gpc = On #在745行 打开magic_quotes_gpc来防止SQL注入
 short_open_tag = ON #在229行支持php短标签
 :wq! #保存退出
-重启mysql,apache
-</code></pre>]]></content>
+重启mysql,apache      
+</code></pre><h2 id="第四步-配置防火墙"><a href="#第四步-配置防火墙" class="headerlink" title="第四步:配置防火墙"></a>第四步:配置防火墙</h2><p>配置防火墙,开启80,3306端口 (<strong>注:将规则添加在默认22端口这条规则下面</strong>)   </p>
+<pre><code>vi /etc/sysconfig/iptables  
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT #允许80端口通过防火墙   
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT #允许3306端口通过防火墙   
+:wq #保存退出   
+</code></pre><p><code>/etc/init.d/iptables restart</code> //重启防火墙使配置生效</p>
+]]></content>
       
         <categories>
             
