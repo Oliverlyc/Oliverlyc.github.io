@@ -15,16 +15,24 @@
 
 
 
-<meta name="description" content="在win10安装centos6.5的虚拟机使用非root账号时，使用sudo命令出现如下警告:    不在sudoers文件中,此事将被报告.">
+<meta name="description" content="在CentOS 6.5 系统下,使用yum install php只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源已经安装过旧版本的请点击这里      
+第一步:安装remi库（如果输入vim /etc/yum.repos.d/remi.repo提示创建新文件,请看此步骤）     
+REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centOS解决'用户不在sudoers文件中'">
-<meta property="og:url" content="http://Oliverlyc.github.io/2017/09/23/centOS解决-用户不在sudoers文件中/index.html">
+<meta property="og:title" content="CentOS系统下安装指定版本的PHP">
+<meta property="og:url" content="http://Oliverlyc.github.io/2017/10/01/CentOS系统下安装指定版本的PHP/index.html">
 <meta property="og:site_name" content="Oliver">
-<meta property="og:description" content="在win10安装centos6.5的虚拟机使用非root账号时，使用sudo命令出现如下警告:    不在sudoers文件中,此事将被报告.">
-<meta property="og:updated_time" content="2017-09-23T16:43:35.937Z">
+<meta property="og:description" content="在CentOS 6.5 系统下,使用yum install php只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源已经安装过旧版本的请点击这里      
+第一步:安装remi库（如果输入vim /etc/yum.repos.d/remi.repo提示创建新文件,请看此步骤）     
+REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P">
+<meta property="og:image" content="http://ox5ha61h3.bkt.clouddn.com//install_php/install_php.png">
+<meta property="og:updated_time" content="2017-10-01T15:54:27.636Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="centOS解决'用户不在sudoers文件中'">
-<meta name="twitter:description" content="在win10安装centos6.5的虚拟机使用非root账号时，使用sudo命令出现如下警告:    不在sudoers文件中,此事将被报告.">
+<meta name="twitter:title" content="CentOS系统下安装指定版本的PHP">
+<meta name="twitter:description" content="在CentOS 6.5 系统下,使用yum install php只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源已经安装过旧版本的请点击这里      
+第一步:安装remi库（如果输入vim /etc/yum.repos.d/remi.repo提示创建新文件,请看此步骤）     
+REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P">
+<meta name="twitter:image" content="http://ox5ha61h3.bkt.clouddn.com//install_php/install_php.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +64,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>centOS解决&#39;用户不在sudoers文件中&#39; | Oliver</title>
+<title>CentOS系统下安装指定版本的PHP | Oliver</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -260,11 +268,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-centOS解决-用户不在sudoers文件中" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-CentOS系统下安装指定版本的PHP" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/09/23/centOS解决-用户不在sudoers文件中/" class="article-date">
-      <time datetime="2017-09-23T15:48:05.000Z" itemprop="datePublished">2017-09-23</time>
+      <a href="/2017/10/01/CentOS系统下安装指定版本的PHP/" class="article-date">
+      <time datetime="2017-09-30T23:41:58.000Z" itemprop="datePublished">2017-10-01</time>
 </a>
 
 
@@ -279,7 +287,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      centOS解决&#39;用户不在sudoers文件中&#39;
+      CentOS系统下安装指定版本的PHP
     </h1>
   
 
@@ -288,13 +296,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    <a class="article-category-link" href="/categories/PHP/">PHP</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sudo/">sudo</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -304,12 +312,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>在win10安装centos6.5的虚拟机<br>使用非root账号时，使用<code>sudo</code>命令出现如下警告:<br>    不在sudoers文件中,此事将被报告.<br><a id="more"></a><br>文件路径:<em>/etc/sudoers</em><br>解决方法:   </p>
+        <p>在CentOS 6.5 系统下,使用<code>yum install php</code>只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源<br><strong>已经安装过旧版本的请点击这里</strong>      </p>
+<h2 id="第一步-安装remi库"><a href="#第一步-安装remi库" class="headerlink" title="第一步:安装remi库"></a>第一步:安装remi库</h2><p>（如果输入<code>vim /etc/yum.repos.d/remi.repo</code>提示创建新文件,请看此步骤）     </p>
+<p>REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的PHP/MySQL系列.        </p>
 <blockquote>
-<ol>
-<li>使用<code>su</code>命令切换到root账号,调用CentOS自带的<code>visudo</code>命令添加账号     </li>
-<li>找到 <strong>root ALL=(ALL:ALL) ALL</strong> 并在下边添加自己的账号,<strong>name ALL=(ALL:ALL) ALL</strong>    </li>
-<li><code>:wq</code>保存后,即可使用<code>sudo</code>命令</li>
+<p>注：不要再启用REMI仓库的时候运行<code>yum update</code>,可能会触发意外的更新。<br><a id="more"></a><br>在CentOS 6.x上:<br>    <code># sudo rpm --import http://rpms.famillecollet.com/RPM-GPG-KEY-remi</code><br>    <code># sudo rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm</code><br>在CentOS 7.x上:<br>    <code># sudo rpm --import http://rpms.famillecollet.com/RPM-GPG-KEY-remi</code><br>    <code># sudo rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm</code><br>使用<code># yum repolist disabled | grep remi</code>查看REMI仓库<br><img src="http://ox5ha61h3.bkt.clouddn.com//install_php/install_php.png" alt="img1">      </p>
+<h2 id="第二步-安装PHP"><a href="#第二步-安装PHP" class="headerlink" title="第二步:安装PHP"></a>第二步:安装PHP</h2><ol>
+<li>添加源<br>32位:<br> <code># wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.1-1.el5.rf.i386.rpm</code><br> <code># rpm -ivh rpmforge-release-0.5.1-1.el5.rf.i386.rpm</code><br>64位:<br> <code># wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.1-1.el5.rf.x86_64.rpm</code><br> <code># rpm -ivh rpmforge-release-0.5.1-1.el5.rf.x86_64.rpm</code> </li>
+<li>使用<code>yum install php(版本号)w</code>来安装PHP</li>
 </ol>
 </blockquote>
 
@@ -320,13 +330,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/09/23/centOS解决-用户不在sudoers文件中/">centOS解决&#39;用户不在sudoers文件中&#39;</a></p>
+        <p><span>本文标题:</span><a href="/2017/10/01/CentOS系统下安装指定版本的PHP/">CentOS系统下安装指定版本的PHP</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Oliver Lin</a></p>
-        <p><span>发布时间:</span>2017-09-23, 23:48:05</p>
-        <p><span>最后更新:</span>2017-09-24, 00:43:35</p>
+        <p><span>发布时间:</span>2017-10-01, 07:41:58</p>
+        <p><span>最后更新:</span>2017-10-01, 23:54:27</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/09/23/centOS解决-用户不在sudoers文件中/" title="centOS解决&#39;用户不在sudoers文件中&#39;">http://Oliverlyc.github.io/2017/09/23/centOS解决-用户不在sudoers文件中/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://Oliverlyc.github.io/2017/09/23/centOS解决-用户不在sudoers文件中/　　作者: Oliver Lin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/10/01/CentOS系统下安装指定版本的PHP/" title="CentOS系统下安装指定版本的PHP">http://Oliverlyc.github.io/2017/10/01/CentOS系统下安装指定版本的PHP/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://Oliverlyc.github.io/2017/10/01/CentOS系统下安装指定版本的PHP/　　作者: Oliver Lin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -338,16 +348,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/09/30/linux添加环境变量/">
-                    linux添加环境变量
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/09/23/CentOS6-5安装Metasploit/">
-                    CentOS6.5安装Metasploit
+                <a href="/2017/09/30/linux添加环境变量/">
+                    linux添加环境变量
                 </a>
             </div>
         
@@ -359,7 +363,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步-安装remi库"><span class="toc-number">1.</span> <span class="toc-text">第一步:安装remi库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步-安装PHP"><span class="toc-number">2.</span> <span class="toc-text">第二步:安装PHP</span></a></li></ol>
         
     </div>
     <style>
@@ -395,7 +399,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"centOS解决'用户不在sudoers文件中'　| Oliver　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"CentOS系统下安装指定版本的PHP　| Oliver　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -415,15 +419,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/09/30/linux添加环境变量/" title="上一篇: linux添加环境变量">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/09/23/CentOS6-5安装Metasploit/" title="下一篇: CentOS6.5安装Metasploit">
+            <a href="/2017/09/30/linux添加环境变量/" title="下一篇: linux添加环境变量">
                 <i class="fa fa-angle-right"></i>
             </a>
         

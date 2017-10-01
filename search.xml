@@ -3,6 +3,36 @@
   
     
     <entry>
+      <title><![CDATA[CentOS系统下安装指定版本的PHP]]></title>
+      <url>/2017/10/01/CentOS%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC%E7%9A%84PHP/</url>
+      <content type="html"><![CDATA[<p>在CentOS 6.5 系统下,使用<code>yum install php</code>只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源<br><strong>已经安装过旧版本的请点击这里</strong>      </p>
+<h2 id="第一步-安装remi库"><a href="#第一步-安装remi库" class="headerlink" title="第一步:安装remi库"></a>第一步:安装remi库</h2><p>（如果输入<code>vim /etc/yum.repos.d/remi.repo</code>提示创建新文件,请看此步骤）     </p>
+<p>REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的PHP/MySQL系列.        </p>
+<blockquote>
+<p>注：不要再启用REMI仓库的时候运行<code>yum update</code>,可能会触发意外的更新。<br><a id="more"></a><br>在CentOS 6.x上:<br>    <code># sudo rpm --import http://rpms.famillecollet.com/RPM-GPG-KEY-remi</code><br>    <code># sudo rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm</code><br>在CentOS 7.x上:<br>    <code># sudo rpm --import http://rpms.famillecollet.com/RPM-GPG-KEY-remi</code><br>    <code># sudo rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm</code><br>使用<code># yum repolist disabled | grep remi</code>查看REMI仓库<br><img src="http://ox5ha61h3.bkt.clouddn.com//install_php/install_php.png" alt="img1">      </p>
+<h2 id="第二步-安装PHP"><a href="#第二步-安装PHP" class="headerlink" title="第二步:安装PHP"></a>第二步:安装PHP</h2><ol>
+<li>添加源<br>32位:<br> <code># wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.1-1.el5.rf.i386.rpm</code><br> <code># rpm -ivh rpmforge-release-0.5.1-1.el5.rf.i386.rpm</code><br>64位:<br> <code># wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.1-1.el5.rf.x86_64.rpm</code><br> <code># rpm -ivh rpmforge-release-0.5.1-1.el5.rf.x86_64.rpm</code> </li>
+<li>使用<code>yum install php(版本号)w</code>来安装PHP</li>
+</ol>
+</blockquote>
+]]></content>
+      
+        <categories>
+            
+            <category> PHP </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> CentOS </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[linux添加环境变量]]></title>
       <url>/2017/09/30/linux%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</url>
       <content type="html"><![CDATA[<p>在Linux系统下,安装完应用程序之后,输入应用名称会提示”<strong>command not found</strong>“,为了避免每次都要打开文件夹执行程序,引入了环境变量,将路径添加到<strong>$PATH</strong>中     </p>
@@ -50,9 +80,9 @@
         
         <tags>
             
-            <tag> sudo </tag>
-            
             <tag> CentOS </tag>
+            
+            <tag> sudo </tag>
             
         </tags>
         
