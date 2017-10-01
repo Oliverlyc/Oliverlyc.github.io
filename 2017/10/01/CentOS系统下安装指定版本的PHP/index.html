@@ -26,7 +26,7 @@ REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P"
 第一步:安装remi库（如果输入vim /etc/yum.repos.d/remi.repo提示创建新文件,请看此步骤）     
 REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P">
 <meta property="og:image" content="http://ox5ha61h3.bkt.clouddn.com//install_php/install_php.png">
-<meta property="og:updated_time" content="2017-10-01T15:54:27.636Z">
+<meta property="og:updated_time" content="2017-10-01T16:14:26.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS系统下安装指定版本的PHP">
 <meta name="twitter:description" content="在CentOS 6.5 系统下,使用yum install php只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源已经安装过旧版本的请点击这里      
@@ -312,16 +312,18 @@ REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P"
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>在CentOS 6.5 系统下,使用<code>yum install php</code>只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源<br><strong>已经安装过旧版本的请点击这里</strong>      </p>
+        <p>在CentOS 6.5 系统下,使用<code>yum install php</code>只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源<br><a href=""><strong>已经安装过旧版本的请点击这里</strong></a>      </p>
 <h2 id="第一步-安装remi库"><a href="#第一步-安装remi库" class="headerlink" title="第一步:安装remi库"></a>第一步:安装remi库</h2><p>（如果输入<code>vim /etc/yum.repos.d/remi.repo</code>提示创建新文件,请看此步骤）     </p>
 <p>REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的PHP/MySQL系列.        </p>
 <blockquote>
-<p>注：不要再启用REMI仓库的时候运行<code>yum update</code>,可能会触发意外的更新。<br><a id="more"></a><br>在CentOS 6.x上:<br>    <code># sudo rpm --import http://rpms.famillecollet.com/RPM-GPG-KEY-remi</code><br>    <code># sudo rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm</code><br>在CentOS 7.x上:<br>    <code># sudo rpm --import http://rpms.famillecollet.com/RPM-GPG-KEY-remi</code><br>    <code># sudo rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm</code><br>使用<code># yum repolist disabled | grep remi</code>查看REMI仓库<br><img src="http://ox5ha61h3.bkt.clouddn.com//install_php/install_php.png" alt="img1">      </p>
+<p>注：不要再启用REMI仓库的时候运行<code>yum update</code>,可能会触发意外的更新.<br><a id="more"></a>       </p>
+</blockquote>
+<p>在CentOS 6.x上:<br>    <code># sudo rpm --import http://rpms.famillecollet.com/RPM-GPG-KEY-remi</code><br>    <code># sudo rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm</code><br>在CentOS 7.x上:<br>    <code># sudo rpm --import http://rpms.famillecollet.com/RPM-GPG-KEY-remi</code><br>    <code># sudo rpm -ivh http://rpms.famillecollet.com/enterprise/remi-release-7.rpm</code><br>使用<code># yum repolist disabled | grep remi</code>查看REMI仓库<br><img src="http://ox5ha61h3.bkt.clouddn.com//install_php/install_php.png" alt="img1">      </p>
 <h2 id="第二步-安装PHP"><a href="#第二步-安装PHP" class="headerlink" title="第二步:安装PHP"></a>第二步:安装PHP</h2><ol>
 <li>添加源<br>32位:<br> <code># wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.1-1.el5.rf.i386.rpm</code><br> <code># rpm -ivh rpmforge-release-0.5.1-1.el5.rf.i386.rpm</code><br>64位:<br> <code># wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.1-1.el5.rf.x86_64.rpm</code><br> <code># rpm -ivh rpmforge-release-0.5.1-1.el5.rf.x86_64.rpm</code> </li>
-<li>使用<code>yum install php(版本号)w</code>来安装PHP</li>
+<li>使用<code>yum install php(版本号)w</code>来安装PHP      <h2 id="升级PHP"><a href="#升级PHP" class="headerlink" title="升级PHP"></a>升级PHP</h2></li>
+<li></li>
 </ol>
-</blockquote>
 
       
     </div>
@@ -333,7 +335,7 @@ REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P"
         <p><span>本文标题:</span><a href="/2017/10/01/CentOS系统下安装指定版本的PHP/">CentOS系统下安装指定版本的PHP</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Oliver Lin</a></p>
         <p><span>发布时间:</span>2017-10-01, 07:41:58</p>
-        <p><span>最后更新:</span>2017-10-01, 23:54:27</p>
+        <p><span>最后更新:</span>2017-10-02, 00:14:26</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/10/01/CentOS系统下安装指定版本的PHP/" title="CentOS系统下安装指定版本的PHP">http://Oliverlyc.github.io/2017/10/01/CentOS系统下安装指定版本的PHP/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Oliverlyc.github.io/2017/10/01/CentOS系统下安装指定版本的PHP/　　作者: Oliver Lin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -363,7 +365,7 @@ REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P"
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步-安装remi库"><span class="toc-number">1.</span> <span class="toc-text">第一步:安装remi库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步-安装PHP"><span class="toc-number">2.</span> <span class="toc-text">第二步:安装PHP</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步-安装remi库"><span class="toc-number">1.</span> <span class="toc-text">第一步:安装remi库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步-安装PHP"><span class="toc-number">2.</span> <span class="toc-text">第二步:安装PHP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#升级PHP"><span class="toc-number">3.</span> <span class="toc-text">升级PHP</span></a></li></ol>
         
     </div>
     <style>
