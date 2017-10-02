@@ -31,7 +31,7 @@ SELINUX=disabled //增加
 SELINUX=disabled //增加
 :wq! //保存退出
 # shutdown -r now //重启系统">
-<meta property="og:updated_time" content="2017-10-02T02:31:52.890Z">
+<meta property="og:updated_time" content="2017-10-02T02:34:55.380Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS6.5搭建LAMP环境">
 <meta name="twitter:description" content="关闭SELINUX# vim /etc/selinux/config     
@@ -358,7 +358,7 @@ MaxKeepAliveRequests 100   #在83行 修改为：MaxKeepAliveRequests 1000 （�
 
 :wq! #保存退出  
 </code></pre><p><code>service httpd restart</code><br><code>rm -f /etc/httpd/conf.d/welcome.conf /var/www/error/noindex.html</code> //删除默认测试页    </p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p><code># cd /var/www/html</code><br><code>vim index.php</code><br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">&lt;?php</div><div class="line">    phpinfo();</div><div class="line">?&gt;</div><div class="line">``` </div><div class="line">`:wq!`</div><div class="line"><span class="comment">### MySQL远程登录   </span></div><div class="line">`mysqld -u root -p` </div><div class="line">Enter Password:     </div><div class="line">```bash     </div><div class="line">mysqld&gt; grant all privileges on *.* to <span class="string">'用户名'</span>@<span class="string">'%'</span> identified by <span class="string">'密码'</span> with grant option;</div></pre></td></tr></table></figure></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p><code># cd /var/www/html</code><br><code>vim index.php</code><br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">&lt;?php</div><div class="line">    phpinfo();</div><div class="line">?&gt;</div><div class="line">``` </div><div class="line">`:wq!`</div><div class="line"></div><div class="line"><span class="comment">### MySQL远程登录   </span></div><div class="line">`mysqld -u root -p` </div><div class="line">Enter Password:     </div><div class="line">```bash     </div><div class="line">mysqld&gt; grant all privileges on *.* to <span class="string">'用户名'</span>@<span class="string">'%'</span> identified by <span class="string">'密码'</span> with grant option;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -370,7 +370,7 @@ MaxKeepAliveRequests 100   #在83行 修改为：MaxKeepAliveRequests 1000 （�
         <p><span>本文标题:</span><a href="/2017/10/02/CentOS6-5搭建LAMP环境/">CentOS6.5搭建LAMP环境</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Oliver Lin</a></p>
         <p><span>发布时间:</span>2017-10-02, 00:51:13</p>
-        <p><span>最后更新:</span>2017-10-02, 10:31:52</p>
+        <p><span>最后更新:</span>2017-10-02, 10:34:55</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/10/02/CentOS6-5搭建LAMP环境/" title="CentOS6.5搭建LAMP环境">http://Oliverlyc.github.io/2017/10/02/CentOS6-5搭建LAMP环境/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Oliverlyc.github.io/2017/10/02/CentOS6-5搭建LAMP环境/　　作者: Oliver Lin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
