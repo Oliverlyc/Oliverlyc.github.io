@@ -362,47 +362,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="关闭SELINUX"><a href="#关闭SELINUX" class="headerlink" title="关闭SELINUX"></a>关闭SELINUX</h2><p><code># vim /etc/selinux/config</code>     </p>
+              <h2 id="关闭SELINUX"><a href="#关闭SELINUX" class="headerlink" title="关闭SELINUX"></a>关闭SELINUX</h2><p><code># vim /etc/selinux/config</code>     </p>
 <pre><code>#SELINUX=ecforcing //注释掉    
 #SELINUXTYPE=targeted //注释掉
 SELINUX=disabled //增加
 :wq! //保存退出
-</code></pre><p><code># shutdown -r now</code> //重启系统  </p>
-<h2 id="安装Apache"><a href="#安装Apache" class="headerlink" title="安装Apache"></a>安装Apache</h2><p><code># yum install httpd</code><br><code># /etc/init.d/httpd start</code> //启动Apache  </p>
-<blockquote>
-<p><strong>注:</strong>如果启动之后提示错误<br><code># vim /etc/httpd/conf/httpd.conf</code>  </p>
-<blockquote>
-<p>找到 #ServerName www.example.com:80<br>修改为 ServerName localhost:80 //也可以设置自己的域名<br>:wq! //保存退出<br><code># chkconf httpd on</code> //设为开机启动<br><code># service httpd restart</code> //重启Apache  </p>
-<h2 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h2><p><code># yum install mysql mysql-server</code><br><code># service mysqld start</code> //启动MySQL<br><code># chkconf mysqld on</code> //设为开机启动<br><code># cp /usr/share/mysql/my-medium.cnf /etc/my.cnf</code> //拷贝配置文件   </p>
-<h3 id="设置root账号密码"><a href="#设置root账号密码" class="headerlink" title="设置root账号密码"></a>设置root账号密码</h3><p><code># mysql_secure_installation</code><br>回车,输入Y<br>输两次密码,回车<br>一路YY下去<br><code># service mysqld restart</code> //重启MySQL    </p>
-<h3 id="设置MySQL密码"><a href="#设置MySQL密码" class="headerlink" title="设置MySQL密码"></a>设置MySQL密码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">mysql&gt; USE mysql;   </div><div class="line">mysql&gt; UPDATE user SET Password=PASSWORD(<span class="string">'newpassword'</span>) WHERE user=<span class="string">'root'</span>;      </div><div class="line">mysql&gt; FLUSH PRIVILEGES;</div></pre></td></tr></table></figure>
-</blockquote>
-</blockquote>
-<h2 id="Apache配置"><a href="#Apache配置" class="headerlink" title="Apache配置"></a>Apache配置</h2><p><code># vim /etc/httpd/conf/httpd.conf</code>  </p>
-<pre><code>ServerTokens OS　    #在44行 修改为：ServerTokens Prod （在出现错误页的时候不显示服务器操作系统的名称）
-
-ServerSignature On　 #在536行 修改为：ServerSignature Off （在错误页中不显示Apache的版本）
-
-Options Indexes FollowSymLinks　  #在331行 修改为：Options Includes ExecCGI FollowSymLinks（允许服务器执行CGI及SSI，禁止列出目录）
-
-#AddHandler cgi-script .cgi　  #在796行 修改为：AddHandler cgi-script .cgi .pl （允许扩展名为.pl的CGI脚本运行）
-
-AllowOverride None　 #在338行 修改为：AllowOverride All （允许.htaccess）
-
-AddDefaultCharset UTF-8　 #在759行 修改为：AddDefaultCharset GB2312　（添加GB2312为默认编码）
-
-Options Indexes MultiViews FollowSymLinks  #在554行 修改为 Options MultiViews FollowSymLinks（不在浏览器上显示树状目录结构）
-
-DirectoryIndex index.html index.html.var  #在402行 修改为：DirectoryIndex index.html index.htm Default.html Default.htm index.php Default.php index.html.var （设置默认首页文件，增加index.php）
-
-KeepAlive Off   #在76行 修改为：KeepAlive On （允许程序性联机）
-
-MaxKeepAliveRequests 100   #在83行 修改为：MaxKeepAliveRequests 1000 （增加同时连接数）
-
-:wq! #保存退出  
-</code></pre><p><code>service httpd restart</code><br><code>rm -f /etc/httpd/conf.d/welcome.conf /var/www/error/noindex.html</code> //删除默认测试页    </p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p><code># cd /var/www/html</code><br><code>vim index.php</code><br><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">&lt;?php</div><div class="line">    phpinfo();</div><div class="line">?&gt;</div><div class="line">``` </div><div class="line">`:wq!`</div><div class="line"><span class="comment">### MySQL远程登录   </span></div><div class="line">`mysqld -u root -p` </div><div class="line">Enter Password:     </div><div class="line">```bash     </div><div class="line">mysqld&gt; grant all privileges on *.* to <span class="string">'用户名'</span>@<span class="string">'%'</span> identified by <span class="string">'密码'</span> with grant option;</div></pre></td></tr></table></figure></p>
-
+</code></pre><p><code># shutdown -r now</code> //重启系统<br>
+          
       
     </div>
     
@@ -419,6 +385,10 @@ MaxKeepAliveRequests 100   #在83行 修改为：MaxKeepAliveRequests 1000 （�
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apache/">Apache</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2017/10/02/CentOS6-5搭建LAMP环境/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

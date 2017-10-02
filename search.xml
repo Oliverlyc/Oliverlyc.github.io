@@ -220,7 +220,7 @@
 #SELINUXTYPE=targeted //注释掉
 SELINUX=disabled //增加
 :wq! //保存退出
-</code></pre><p><code># shutdown -r now</code> //重启系统  </p>
+</code></pre><p><code># shutdown -r now</code> //重启系统<br><a id="more"></a></p>
 <h2 id="安装Apache"><a href="#安装Apache" class="headerlink" title="安装Apache"></a>安装Apache</h2><p><code># yum install httpd</code><br><code># /etc/init.d/httpd start</code> //启动Apache  </p>
 <blockquote>
 <p><strong>注:</strong>如果启动之后提示错误<br><code># vim /etc/httpd/conf/httpd.conf</code>  </p>
