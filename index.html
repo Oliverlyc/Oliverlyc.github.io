@@ -263,6 +263,171 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-MySQL用户管理和权限设置" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/10/04/MySQL用户管理和权限设置/" class="article-date">
+      <time datetime="2017-10-04T15:56:54.000Z" itemprop="datePublished">2017-10-04</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/04/MySQL用户管理和权限设置/">MySQL用户管理和权限设置</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="用户基本操作"><a href="#用户基本操作" class="headerlink" title="用户基本操作"></a>用户基本操作</h2><blockquote>
+<p>注:设置权限时必须给出以下信息   </p>
+<blockquote>
+<p>要授予的权健<br>被授予访问权限的数据库或表<br>用户名     </p>
+</blockquote>
+<p>grant和revoke可以在几个层次上控制访问权限     </p>
+<blockquote>
+<p>所有权限使用 grant all 和 revoke all<br>整个数据库 使用*<br>特定库和表 使用on basename.table<br>特定列<br>特定存储过程</p>
+</blockquote>
+</blockquote>
+<h3 id="创建用户并授权"><a href="#创建用户并授权" class="headerlink" title="创建用户并授权"></a>创建用户并授权</h3><p><code>mysql&gt; grant 权限 on 数据库.表 to 用户名@登录主机 identified by &quot;密码&quot;;</code></p>
+<blockquote>
+<p>权限: </p>
+<blockquote>
+<p>普通用户操作数据权限: select, delete, update, insert     </p>
+<p>数据库开发人员: create, drop, show, alter, index(索引), all privileges(所有权限)  </p>
+</blockquote>
+<p>数据库.表:     </p>
+<blockquote>
+<p>所有数据库中所有表: *.*<br>特定数据库中特定表: basename.table   </p>
+</blockquote>
+<p>登录主机:  </p>
+<blockquote>
+<p>所有非本地主机: @’%’ (不包括localhost, <strong>慎用</strong>);<br>某个局域网下所有子网用户: @’192.168.0.%’;   </p>
+</blockquote>
+</blockquote>
+<p><code>mysql&gt; flush privileges</code> //更新权限     </p>
+<h3 id="回收权限"><a href="#回收权限" class="headerlink" title="回收权限"></a>回收权限</h3><blockquote>
+<p>将 grant 替换为 revoke;</p>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p><code>mysql&gt; use mysql;</code> //进入mysql库<br><code>mysql&gt; delect from user where User=&#39;用户名&#39; and Host=&#39;主机&#39;</code> //删除用户<br><code>mysql&gt; drop user 用户名</code> //这个命令也可以 mysql5之前的版本需要先revoke删除用户权限, 再删除用户<br><code>flush privileges</code> //更新权限   </p>
+<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><p><code>mysql&gt; update user set password=password(&#39;XXXXX&#39;) where User=&#39;用户名&#39; (and Host=&#39;主机&#39;);</code>  //修改特定用户(特定主机)的密码     </p>
+</blockquote>
+<p><code>mysql&gt; show grants for 用户名;</code> //查看用户权限   </p>
+<p><code>mysql&gt; rename user 旧名字 to 新名字;</code> //mysql5之后可以使用, 之前的版本需要使用 <code>update</code> 更新表 </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/数据库/">数据库</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-MySQL常用命令行" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/10/04/MySQL常用命令行/" class="article-date">
+      <time datetime="2017-10-04T09:34:15.000Z" itemprop="datePublished">2017-10-04</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/04/MySQL常用命令行/">MySQL常用命令行</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 显示数据库</span></div><div class="line">mysql&gt; show databases;       </div><div class="line"><span class="comment"># 打开库</span></div><div class="line">mysql&gt; use <span class="string">'库名'</span>;    </div><div class="line"><span class="comment"># 显示数据库中的表       </span></div><div class="line">mysql&gt; show tables;</div></pre></td></tr></table></figure>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/数据库/">数据库</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2017/10/04/MySQL常用命令行/#more">阅读全文 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Linux系统各文件夹结构说明及用途" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -659,140 +824,6 @@ SELINUX=disabled //增加
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透/">渗透</a></li></ul>
     </div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-数据库事务的4大特性" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/09/19/数据库事务的4大特性/" class="article-date">
-      <time datetime="2017-09-19T15:18:42.000Z" itemprop="datePublished">2017-09-19</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/19/数据库事务的4大特性/">数据库事务的4大特性</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="1-原子性"><a href="#1-原子性" class="headerlink" title="1. 原子性"></a>1. <strong>原子性</strong></h2><pre><code>事务的所有操作,要么全部成功执行,要么全部失败,要么完全应用到数据库中,要么对数据库没有任何影响.   
-</code></pre>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/数据库/">数据库</a>
-    </div>
-
-
-      
-      
-        <p class="article-more-link">
-          <a href="/2017/09/19/数据库事务的4大特性/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-php配置json文件" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/09/16/php配置json文件/" class="article-date">
-      <time datetime="2017-09-16T08:21:25.000Z" itemprop="datePublished">2017-09-16</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/16/php配置json文件/">php配置json文件</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="php数组数据写入json文件"><a href="#php数组数据写入json文件" class="headerlink" title="php数组数据写入json文件"></a>php数组数据写入json文件</h2><blockquote>
-<p><code>&lt;?php</code><br>　　<code>$data = array</code><br>　　<code>$data[&#39;a&#39;] = &#39;test&#39;;</code><br>　　<code>$data[&#39;b&#39;] = &#39;abc&#39;;</code><br>　　<code>$json_string = json_encode($data);</code><br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/PHP/">PHP</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/json/">json</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/09/16/php配置json文件/#more">阅读全文 >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>

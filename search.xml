@@ -3,6 +3,86 @@
   
     
     <entry>
+      <title><![CDATA[MySQL用户管理和权限设置]]></title>
+      <url>/2017/10/04/MySQL%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E5%92%8C%E6%9D%83%E9%99%90%E8%AE%BE%E7%BD%AE/</url>
+      <content type="html"><![CDATA[<h2 id="用户基本操作"><a href="#用户基本操作" class="headerlink" title="用户基本操作"></a>用户基本操作</h2><blockquote>
+<p>注:设置权限时必须给出以下信息   </p>
+<blockquote>
+<p>要授予的权健<br>被授予访问权限的数据库或表<br>用户名     </p>
+</blockquote>
+<p>grant和revoke可以在几个层次上控制访问权限     </p>
+<blockquote>
+<p>所有权限使用 grant all 和 revoke all<br>整个数据库 使用*<br>特定库和表 使用on basename.table<br>特定列<br>特定存储过程</p>
+</blockquote>
+</blockquote>
+<h3 id="创建用户并授权"><a href="#创建用户并授权" class="headerlink" title="创建用户并授权"></a>创建用户并授权</h3><p><code>mysql&gt; grant 权限 on 数据库.表 to 用户名@登录主机 identified by &quot;密码&quot;;</code></p>
+<blockquote>
+<p>权限: </p>
+<blockquote>
+<p>普通用户操作数据权限: select, delete, update, insert     </p>
+<p>数据库开发人员: create, drop, show, alter, index(索引), all privileges(所有权限)  </p>
+</blockquote>
+<p>数据库.表:     </p>
+<blockquote>
+<p>所有数据库中所有表: *.*<br>特定数据库中特定表: basename.table   </p>
+</blockquote>
+<p>登录主机:  </p>
+<blockquote>
+<p>所有非本地主机: @’%’ (不包括localhost, <strong>慎用</strong>);<br>某个局域网下所有子网用户: @’192.168.0.%’;   </p>
+</blockquote>
+</blockquote>
+<p><code>mysql&gt; flush privileges</code> //更新权限     </p>
+<h3 id="回收权限"><a href="#回收权限" class="headerlink" title="回收权限"></a>回收权限</h3><blockquote>
+<p>将 grant 替换为 revoke;</p>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p><code>mysql&gt; use mysql;</code> //进入mysql库<br><code>mysql&gt; delect from user where User=&#39;用户名&#39; and Host=&#39;主机&#39;</code> //删除用户<br><code>mysql&gt; drop user 用户名</code> //这个命令也可以 mysql5之前的版本需要先revoke删除用户权限, 再删除用户<br><code>flush privileges</code> //更新权限   </p>
+<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><p><code>mysql&gt; update user set password=password(&#39;XXXXX&#39;) where User=&#39;用户名&#39; (and Host=&#39;主机&#39;);</code>  //修改特定用户(特定主机)的密码     </p>
+</blockquote>
+<p><code>mysql&gt; show grants for 用户名;</code> //查看用户权限   </p>
+<p><code>mysql&gt; rename user 旧名字 to 新名字;</code> //mysql5之后可以使用, 之前的版本需要使用 <code>update</code> 更新表 </p>
+]]></content>
+      
+        <categories>
+            
+            <category> 数据库 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[MySQL常用命令行]]></title>
+      <url>/2017/10/04/MySQL%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C/</url>
+      <content type="html"><![CDATA[<h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 显示数据库</span></div><div class="line">mysql&gt; show databases;       </div><div class="line"><span class="comment"># 打开库</span></div><div class="line">mysql&gt; use <span class="string">'库名'</span>;    </div><div class="line"><span class="comment"># 显示数据库中的表       </span></div><div class="line">mysql&gt; show tables;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 显示表结构</span></div><div class="line">mysql&gt; describe <span class="string">'表名'</span>;</div><div class="line"><span class="comment"># 创建库   </span></div><div class="line">mysql&gt; create database <span class="string">'库名'</span>;    </div><div class="line"><span class="comment"># 创建表   </span></div><div class="line">mysql&gt; create table <span class="string">'表名'</span> (<span class="string">'字段设定列表'</span>);</div><div class="line"><span class="comment"># 查看当前安装的MySQL所支持的字符集</span></div><div class="line">mysql&gt; show charset;</div><div class="line"><span class="comment"># 删除库</span></div><div class="line">mysql&gt; drop databases <span class="string">'库名'</span>;</div></pre></td></tr></table></figure>
+<h2 id="对字段的操作"><a href="#对字段的操作" class="headerlink" title="对字段的操作"></a>对字段的操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 添加表字段   </span></div><div class="line">mysql&gt; alter table <span class="string">'表名'</span> add <span class="string">'字段名称'</span> <span class="string">'类型(长度)'</span> <span class="string">'是否为空'</span>;</div><div class="line">mysql&gt; alter table userlist add id int(10) not null; auto_increment primary key;     </div><div class="line"><span class="comment"># 修改表字段类型及指定为空或非空   </span></div><div class="line">mysql&gt; alter table <span class="string">'表名'</span> change <span class="string">'字段名称'</span> <span class="string">'字段名称'</span> <span class="string">'字段类型'</span> <span class="string">'是否允许非空'</span>;</div><div class="line"><span class="comment"># 修改字段字符集   </span></div><div class="line">mysql&gt; alter table <span class="string">'表名'</span> modify column <span class="string">'字段名'</span> <span class="string">'字段类型'</span> character <span class="built_in">set</span> <span class="string">'字符集'</span>;</div><div class="line"><span class="comment"># 删除字段</span></div><div class="line">mysql&gt; alter table <span class="string">'表名'</span> drop <span class="string">'字段名'</span>;</div></pre></td></tr></table></figure>
+<h2 id="对表的操作"><a href="#对表的操作" class="headerlink" title="对表的操作"></a>对表的操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 显示表内字段的字符集</span></div><div class="line">mysql&gt; show full columns from <span class="string">'表名'</span>;</div><div class="line"><span class="comment"># 修改表的字符集</span></div><div class="line">mysql&gt; alter table user default character <span class="built_in">set</span> <span class="string">'字符集'</span>;</div><div class="line"><span class="comment"># 删除表</span></div><div class="line">mysql&gt; drop table <span class="string">'表名'</span>;</div></pre></td></tr></table></figure>
+<h2 id="对数据的操作"><a href="#对数据的操作" class="headerlink" title="对数据的操作"></a>对数据的操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 增加记录</span></div><div class="line">mysql&gt; insert into <span class="string">'表名'</span> value(<span class="string">'张三'</span>,<span class="string">'男'</span>);</div><div class="line"><span class="comment"># 显示表内数据</span></div><div class="line">mysql&gt; select * from <span class="string">'表名'</span>; (*可以被替换为字段名,可以加<span class="built_in">where</span>)</div><div class="line"><span class="comment"># 修改记录</span></div><div class="line">mysql&gt; update <span class="string">'表名'</span> <span class="built_in">set</span> sex=<span class="string">'修改的数据'</span> <span class="built_in">where</span> name=<span class="string">'张三'</span>;</div><div class="line"><span class="comment"># 删除记录</span></div><div class="line">mysql&gt; delete from <span class="string">'表名'</span> <span class="built_in">where</span> name=<span class="string">'张三'</span>;</div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> 数据库 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Linux系统各文件夹结构说明及用途]]></title>
       <url>/2017/10/02/Linux%E7%B3%BB%E7%BB%9F%E5%90%84%E6%96%87%E4%BB%B6%E5%A4%B9%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E%E5%8F%8A%E7%94%A8%E9%80%94/</url>
       <content type="html"><![CDATA[<p>/bin 二进制可执行命令</p>

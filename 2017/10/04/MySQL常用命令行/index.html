@@ -15,28 +15,16 @@
 
 
 
-<meta name="description" content="在Linux系统下,安装完应用程序之后,输入应用名称会提示”command not found“,为了避免每次都要打开文件夹执行程序,引入了环境变量,将路径添加到$PATH中     
-
-# vim ~/.bashrc   
-在最后一行加入 # PATH export PATH=路径:$PATH    
-保存退出执行命令 # source ~/.bashrc">
+<meta name="description" content="常用指令# 显示数据库mysql&amp;gt; show databases;       # 打开库mysql&amp;gt; use &apos;库名&apos;;    # 显示数据库中的表       mysql&amp;gt; show tables;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux添加环境变量">
-<meta property="og:url" content="http://Oliverlyc.github.io/2017/09/30/linux添加环境变量/index.html">
+<meta property="og:title" content="MySQL常用命令行">
+<meta property="og:url" content="http://Oliverlyc.github.io/2017/10/04/MySQL常用命令行/index.html">
 <meta property="og:site_name" content="Oliver">
-<meta property="og:description" content="在Linux系统下,安装完应用程序之后,输入应用名称会提示”command not found“,为了避免每次都要打开文件夹执行程序,引入了环境变量,将路径添加到$PATH中     
-
-# vim ~/.bashrc   
-在最后一行加入 # PATH export PATH=路径:$PATH    
-保存退出执行命令 # source ~/.bashrc">
-<meta property="og:updated_time" content="2017-09-30T09:24:25.650Z">
+<meta property="og:description" content="常用指令# 显示数据库mysql&amp;gt; show databases;       # 打开库mysql&amp;gt; use &apos;库名&apos;;    # 显示数据库中的表       mysql&amp;gt; show tables;">
+<meta property="og:updated_time" content="2017-10-04T16:02:23.842Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux添加环境变量">
-<meta name="twitter:description" content="在Linux系统下,安装完应用程序之后,输入应用名称会提示”command not found“,为了避免每次都要打开文件夹执行程序,引入了环境变量,将路径添加到$PATH中     
-
-# vim ~/.bashrc   
-在最后一行加入 # PATH export PATH=路径:$PATH    
-保存退出执行命令 # source ~/.bashrc">
+<meta name="twitter:title" content="MySQL常用命令行">
+<meta name="twitter:description" content="常用指令# 显示数据库mysql&amp;gt; show databases;       # 打开库mysql&amp;gt; use &apos;库名&apos;;    # 显示数据库中的表       mysql&amp;gt; show tables;">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -68,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>linux添加环境变量 | Oliver</title>
+<title>MySQL常用命令行 | Oliver</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -272,11 +260,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-linux添加环境变量" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-MySQL常用命令行" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/09/30/linux添加环境变量/" class="article-date">
-      <time datetime="2017-09-30T09:08:58.000Z" itemprop="datePublished">2017-09-30</time>
+      <a href="/2017/10/04/MySQL常用命令行/" class="article-date">
+      <time datetime="2017-10-04T09:34:15.000Z" itemprop="datePublished">2017-10-04</time>
 </a>
 
 
@@ -291,7 +279,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      linux添加环境变量
+      MySQL常用命令行
     </h1>
   
 
@@ -300,13 +288,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Linux/">Linux</a>
+    <a class="article-category-link" href="/categories/数据库/">数据库</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CentOS/">CentOS</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -316,12 +304,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>在Linux系统下,安装完应用程序之后,输入应用名称会提示”<strong>command not found</strong>“,为了避免每次都要打开文件夹执行程序,引入了环境变量,将路径添加到<strong>$PATH</strong>中     </p>
-<ol>
-<li><code># vim ~/.bashrc</code>   </li>
-<li>在最后一行加入<br> <code># PATH</code><br> <code>export PATH=路径:$PATH</code>    </li>
-<li>保存退出执行命令<br> <code># source ~/.bashrc</code></li>
-</ol>
+        <h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 显示数据库</span></div><div class="line">mysql&gt; show databases;       </div><div class="line"><span class="comment"># 打开库</span></div><div class="line">mysql&gt; use <span class="string">'库名'</span>;    </div><div class="line"><span class="comment"># 显示数据库中的表       </span></div><div class="line">mysql&gt; show tables;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 显示表结构</span></div><div class="line">mysql&gt; describe <span class="string">'表名'</span>;</div><div class="line"><span class="comment"># 创建库   </span></div><div class="line">mysql&gt; create database <span class="string">'库名'</span>;    </div><div class="line"><span class="comment"># 创建表   </span></div><div class="line">mysql&gt; create table <span class="string">'表名'</span> (<span class="string">'字段设定列表'</span>);</div><div class="line"><span class="comment"># 查看当前安装的MySQL所支持的字符集</span></div><div class="line">mysql&gt; show charset;</div><div class="line"><span class="comment"># 删除库</span></div><div class="line">mysql&gt; drop databases <span class="string">'库名'</span>;</div></pre></td></tr></table></figure>
+<h2 id="对字段的操作"><a href="#对字段的操作" class="headerlink" title="对字段的操作"></a>对字段的操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 添加表字段   </span></div><div class="line">mysql&gt; alter table <span class="string">'表名'</span> add <span class="string">'字段名称'</span> <span class="string">'类型(长度)'</span> <span class="string">'是否为空'</span>;</div><div class="line">mysql&gt; alter table userlist add id int(10) not null; auto_increment primary key;     </div><div class="line"><span class="comment"># 修改表字段类型及指定为空或非空   </span></div><div class="line">mysql&gt; alter table <span class="string">'表名'</span> change <span class="string">'字段名称'</span> <span class="string">'字段名称'</span> <span class="string">'字段类型'</span> <span class="string">'是否允许非空'</span>;</div><div class="line"><span class="comment"># 修改字段字符集   </span></div><div class="line">mysql&gt; alter table <span class="string">'表名'</span> modify column <span class="string">'字段名'</span> <span class="string">'字段类型'</span> character <span class="built_in">set</span> <span class="string">'字符集'</span>;</div><div class="line"><span class="comment"># 删除字段</span></div><div class="line">mysql&gt; alter table <span class="string">'表名'</span> drop <span class="string">'字段名'</span>;</div></pre></td></tr></table></figure>
+<h2 id="对表的操作"><a href="#对表的操作" class="headerlink" title="对表的操作"></a>对表的操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 显示表内字段的字符集</span></div><div class="line">mysql&gt; show full columns from <span class="string">'表名'</span>;</div><div class="line"><span class="comment"># 修改表的字符集</span></div><div class="line">mysql&gt; alter table user default character <span class="built_in">set</span> <span class="string">'字符集'</span>;</div><div class="line"><span class="comment"># 删除表</span></div><div class="line">mysql&gt; drop table <span class="string">'表名'</span>;</div></pre></td></tr></table></figure>
+<h2 id="对数据的操作"><a href="#对数据的操作" class="headerlink" title="对数据的操作"></a>对数据的操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 增加记录</span></div><div class="line">mysql&gt; insert into <span class="string">'表名'</span> value(<span class="string">'张三'</span>,<span class="string">'男'</span>);</div><div class="line"><span class="comment"># 显示表内数据</span></div><div class="line">mysql&gt; select * from <span class="string">'表名'</span>; (*可以被替换为字段名,可以加<span class="built_in">where</span>)</div><div class="line"><span class="comment"># 修改记录</span></div><div class="line">mysql&gt; update <span class="string">'表名'</span> <span class="built_in">set</span> sex=<span class="string">'修改的数据'</span> <span class="built_in">where</span> name=<span class="string">'张三'</span>;</div><div class="line"><span class="comment"># 删除记录</span></div><div class="line">mysql&gt; delete from <span class="string">'表名'</span> <span class="built_in">where</span> name=<span class="string">'张三'</span>;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -330,13 +318,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/09/30/linux添加环境变量/">linux添加环境变量</a></p>
+        <p><span>本文标题:</span><a href="/2017/10/04/MySQL常用命令行/">MySQL常用命令行</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Oliver Lin</a></p>
-        <p><span>发布时间:</span>2017-09-30, 17:08:58</p>
-        <p><span>最后更新:</span>2017-09-30, 17:24:25</p>
+        <p><span>发布时间:</span>2017-10-04, 17:34:15</p>
+        <p><span>最后更新:</span>2017-10-05, 00:02:23</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/09/30/linux添加环境变量/" title="linux添加环境变量">http://Oliverlyc.github.io/2017/09/30/linux添加环境变量/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://Oliverlyc.github.io/2017/09/30/linux添加环境变量/　　作者: Oliver Lin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/10/04/MySQL常用命令行/" title="MySQL常用命令行">http://Oliverlyc.github.io/2017/10/04/MySQL常用命令行/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://Oliverlyc.github.io/2017/10/04/MySQL常用命令行/　　作者: Oliver Lin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -349,15 +337,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/10/01/CentOS系统下安装指定版本的PHP/">
-                    CentOS系统下安装指定版本的PHP
+                <a href="/2017/10/04/MySQL用户管理和权限设置/">
+                    MySQL用户管理和权限设置
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/09/23/centOS解决-用户不在sudoers文件中/">
-                    centOS解决&#39;用户不在sudoers文件中&#39;
+                <a href="/2017/10/02/Linux系统各文件夹结构说明及用途/">
+                    Linux系统各文件夹结构说明及用途
                 </a>
             </div>
         
@@ -369,7 +357,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#常用指令"><span class="toc-number">1.</span> <span class="toc-text">常用指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对字段的操作"><span class="toc-number">2.</span> <span class="toc-text">对字段的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对表的操作"><span class="toc-number">3.</span> <span class="toc-text">对表的操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对数据的操作"><span class="toc-number">4.</span> <span class="toc-text">对数据的操作</span></a></li></ol>
         
     </div>
     <style>
@@ -405,7 +393,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"linux添加环境变量　| Oliver　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"MySQL常用命令行　| Oliver　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -425,7 +413,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/10/01/CentOS系统下安装指定版本的PHP/" title="上一篇: CentOS系统下安装指定版本的PHP">
+            <a href="/2017/10/04/MySQL用户管理和权限设置/" title="上一篇: MySQL用户管理和权限设置">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -433,7 +421,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/09/23/centOS解决-用户不在sudoers文件中/" title="下一篇: centOS解决&#39;用户不在sudoers文件中&#39;">
+            <a href="/2017/10/02/Linux系统各文件夹结构说明及用途/" title="下一篇: Linux系统各文件夹结构说明及用途">
                 <i class="fa fa-angle-right"></i>
             </a>
         
