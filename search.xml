@@ -12,14 +12,8 @@
 </blockquote>
 <p>grant和revoke可以在几个层次上控制访问权限     </p>
 <blockquote>
-<p>所有权限使用 grant all 和 revoke all<br>整个数据库 使用*<br>特定库和表 使用on basename.table<br>特定列<br>特定存储过程</p>
-</blockquote>
-</blockquote>
-<h3 id="创建用户并授权"><a href="#创建用户并授权" class="headerlink" title="创建用户并授权"></a>创建用户并授权</h3><p><code>mysql&gt; grant 权限 on 数据库.表 to 用户名@登录主机 identified by &quot;密码&quot;;</code></p>
-<blockquote>
-<p>权限: </p>
-<blockquote>
-<p>普通用户操作数据权限: select, delete, update, insert     </p>
+<p>所有权限使用 grant all 和 revoke all<br>整个数据库 使用*<br>特定库和表 使用on basename.table<br>特定列<br>特定存储过程<br><a id="more"></a></p>
+<h3 id="创建用户并授权"><a href="#创建用户并授权" class="headerlink" title="创建用户并授权"></a>创建用户并授权</h3><p><code>mysql&gt; grant 权限 on 数据库.表 to 用户名@登录主机 identified by &quot;密码&quot;;</code><br>权限:<br>普通用户操作数据权限: select, delete, update, insert     </p>
 <p>数据库开发人员: create, drop, show, alter, index(索引), all privileges(所有权限)  </p>
 </blockquote>
 <p>数据库.表:     </p>
