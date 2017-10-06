@@ -3,6 +3,36 @@
   
     
     <entry>
+      <title><![CDATA[php artisan migrate 执行问题]]></title>
+      <url>/2017/10/06/php-artisan-migrate-%E6%89%A7%E8%A1%8C%E9%97%AE%E9%A2%98/</url>
+      <content type="html"><![CDATA[<p>在wamp环境下搭建Laravel框架,执行:php artisan migrate<br>出现错误:   </p>
+<pre><code>E:\PHP\Project\learnlaravel5&gt;php artisan migrate
+
+[Illuminate\Database\QueryException]
+
+could not find driver (SQL: select * from information_schema.tables where table_schema = homestead and table_name =migrations)
+
+[PDOException]
+could not find driver   
+</code></pre><p>解决方法:<br>找到<strong>php.ini</strong>文件<br>去掉<strong>extension=php_pdo_mysql.dll</strong>前面的分号</p>
+]]></content>
+      
+        <categories>
+            
+            <category> PHP </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Laravel </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[MySQL用户管理和权限设置]]></title>
       <url>/2017/10/04/MySQL%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E5%92%8C%E6%9D%83%E9%99%90%E8%AE%BE%E7%BD%AE/</url>
       <content type="html"><![CDATA[<h2 id="用户基本操作"><a href="#用户基本操作" class="headerlink" title="用户基本操作"></a>用户基本操作</h2><blockquote>
