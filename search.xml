@@ -329,8 +329,8 @@ SELINUX=disabled //增加
 <blockquote>
 <p><strong>注:</strong>如果启动之后提示错误<br><code># vim /etc/httpd/conf/httpd.conf</code>  </p>
 <blockquote>
-<p>找到 #ServerName www.example.com:80<br>修改为 ServerName localhost:80 //也可以设置自己的域名<br>:wq! //保存退出<br><code># chkconf httpd on</code> //设为开机启动<br><code># service httpd restart</code> //重启Apache  </p>
-<h2 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h2><p><code># yum install mysql mysql-server</code><br><code># service mysqld start</code> //启动MySQL<br><code># chkconf mysqld on</code> //设为开机启动<br><code># cp /usr/share/mysql/my-medium.cnf /etc/my.cnf</code> //拷贝配置文件   </p>
+<p>找到 #ServerName www.example.com:80<br>修改为 ServerName localhost:80 //也可以设置自己的域名<br>:wq! //保存退出<br><code># chkconfig httpd on</code> //设为开机启动<br><code># service httpd restart</code> //重启Apache  </p>
+<h2 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h2><p><code># yum install mysql mysql-server</code><br><code># service mysqld start</code> //启动MySQL<br><code># chkconfig mysqld on</code> //设为开机启动<br><code># cp /usr/share/mysql/my-medium.cnf /etc/my.cnf</code> //拷贝配置文件   </p>
 <h3 id="设置root账号密码"><a href="#设置root账号密码" class="headerlink" title="设置root账号密码"></a>设置root账号密码</h3><p><code># mysql_secure_installation</code><br>回车,输入Y<br>输两次密码,回车<br>一路YY下去<br><code># service mysqld restart</code> //重启MySQL    </p>
 <h3 id="设置MySQL密码"><a href="#设置MySQL密码" class="headerlink" title="设置MySQL密码"></a>设置MySQL密码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">mysql&gt; USE mysql;   </div><div class="line">mysql&gt; UPDATE user SET Password=PASSWORD(<span class="string">'newpassword'</span>) WHERE user=<span class="string">'root'</span>;      </div><div class="line">mysql&gt; FLUSH PRIVILEGES;</div></pre></td></tr></table></figure>
 </blockquote>
