@@ -35,7 +35,7 @@ grant和revoke可以在几个层次上控制访问权限
 grant和revoke可以在几个层次上控制访问权限     
 
 所有权限使用 grant all 和 revoke all整个数据库 使用*特定库和表 使用on basename.table特定列特定存储过程">
-<meta property="og:updated_time" content="2017-10-05T03:12:32.587Z">
+<meta property="og:updated_time" content="2017-10-16T09:27:52.071Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL用户管理和权限设置">
 <meta name="twitter:description" content="用户基本操作
@@ -348,7 +348,7 @@ grant和revoke可以在几个层次上控制访问权限
 <p><code>mysql&gt; flush privileges</code> //更新权限     </p>
 <h3 id="回收权限"><a href="#回收权限" class="headerlink" title="回收权限"></a>回收权限</h3><blockquote>
 <p>将 grant 替换为 revoke;</p>
-<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p><code>mysql&gt; use mysql;</code> //进入mysql库<br><code>mysql&gt; delect from user where User=&#39;用户名&#39; and Host=&#39;主机&#39;</code> //删除用户<br><code>mysql&gt; drop user 用户名</code> //这个命令也可以 mysql5之前的版本需要先revoke删除用户权限, 再删除用户<br><code>flush privileges</code> //更新权限   </p>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p><code>mysql&gt; use mysql;</code> //进入mysql库<br><code>mysql&gt; delete from user where User=&#39;用户名&#39; and Host=&#39;主机&#39;</code> //删除用户<br><code>mysql&gt; drop user 用户名</code> //这个命令也可以 mysql5之前的版本需要先revoke删除用户权限, 再删除用户<br><code>flush privileges</code> //更新权限   </p>
 <h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><p><code>mysql&gt; update user set password=password(&#39;XXXXX&#39;) where User=&#39;用户名&#39; (and Host=&#39;主机&#39;);</code>  //修改特定用户(特定主机)的密码     </p>
 </blockquote>
 <p><code>mysql&gt; show grants for 用户名;</code> //查看用户权限   </p>
@@ -364,7 +364,7 @@ grant和revoke可以在几个层次上控制访问权限
         <p><span>本文标题:</span><a href="/2017/10/04/MySQL用户管理和权限设置/">MySQL用户管理和权限设置</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Oliver Lin</a></p>
         <p><span>发布时间:</span>2017-10-04, 23:56:54</p>
-        <p><span>最后更新:</span>2017-10-05, 11:12:32</p>
+        <p><span>最后更新:</span>2017-10-16, 17:27:52</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/10/04/MySQL用户管理和权限设置/" title="MySQL用户管理和权限设置">http://Oliverlyc.github.io/2017/10/04/MySQL用户管理和权限设置/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Oliverlyc.github.io/2017/10/04/MySQL用户管理和权限设置/　　作者: Oliver Lin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

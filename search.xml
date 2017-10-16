@@ -58,7 +58,7 @@ could not find driver
 <p><code>mysql&gt; flush privileges</code> //更新权限     </p>
 <h3 id="回收权限"><a href="#回收权限" class="headerlink" title="回收权限"></a>回收权限</h3><blockquote>
 <p>将 grant 替换为 revoke;</p>
-<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p><code>mysql&gt; use mysql;</code> //进入mysql库<br><code>mysql&gt; delect from user where User=&#39;用户名&#39; and Host=&#39;主机&#39;</code> //删除用户<br><code>mysql&gt; drop user 用户名</code> //这个命令也可以 mysql5之前的版本需要先revoke删除用户权限, 再删除用户<br><code>flush privileges</code> //更新权限   </p>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p><code>mysql&gt; use mysql;</code> //进入mysql库<br><code>mysql&gt; delete from user where User=&#39;用户名&#39; and Host=&#39;主机&#39;</code> //删除用户<br><code>mysql&gt; drop user 用户名</code> //这个命令也可以 mysql5之前的版本需要先revoke删除用户权限, 再删除用户<br><code>flush privileges</code> //更新权限   </p>
 <h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><p><code>mysql&gt; update user set password=password(&#39;XXXXX&#39;) where User=&#39;用户名&#39; (and Host=&#39;主机&#39;);</code>  //修改特定用户(特定主机)的密码     </p>
 </blockquote>
 <p><code>mysql&gt; show grants for 用户名;</code> //查看用户权限   </p>
