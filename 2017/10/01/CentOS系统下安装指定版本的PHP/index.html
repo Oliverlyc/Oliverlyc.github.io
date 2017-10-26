@@ -26,7 +26,7 @@ REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P"
 第一步:安装remi库（如果输入vim /etc/yum.repos.d/remi.repo提示创建新文件,请看此步骤）     
 REMI仓库提供了CentOS和RHEL的核心包的更新版本,尤其是最新的P">
 <meta property="og:image" content="http://ox5ha61h3.bkt.clouddn.com//install_php/install_php.png">
-<meta property="og:updated_time" content="2017-10-26T12:49:23.491Z">
+<meta property="og:updated_time" content="2017-10-26T12:56:58.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS系统下安装指定版本的PHP">
 <meta name="twitter:description" content="在CentOS 6.5 系统下,使用yum install php只会默认安装php5.3.x这个版本,所以为了安装其他版本的php我们需要添加第三方源已经安装过旧版本的请点击这里      
@@ -329,6 +329,7 @@ date.timezone = PRC #在946行 把前面的分号去掉，改为date.timezone = 
 expose_php = Off #在432行 禁止显示php版本的信息
 magic_quotes_gpc = On #在745行 打开magic_quotes_gpc来防止SQL注入
 short_open_tag = ON #在229行支持php短标签
+display_errors = On #打开错误提示
 :wq! #保存退出
 重启mysql,apache      
 </code></pre><h2 id="第四步-配置防火墙"><a href="#第四步-配置防火墙" class="headerlink" title="第四步:配置防火墙"></a>第四步:配置防火墙</h2><p>配置防火墙,开启80,3306端口 (<strong>注:将规则添加在默认22端口这条规则下面</strong>)   </p>
@@ -349,7 +350,7 @@ short_open_tag = ON #在229行支持php短标签
         <p><span>本文标题:</span><a href="/2017/10/01/CentOS系统下安装指定版本的PHP/">CentOS系统下安装指定版本的PHP</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Oliver Lin</a></p>
         <p><span>发布时间:</span>2017-10-01, 07:41:58</p>
-        <p><span>最后更新:</span>2017-10-26, 20:49:23</p>
+        <p><span>最后更新:</span>2017-10-26, 20:56:58</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/10/01/CentOS系统下安装指定版本的PHP/" title="CentOS系统下安装指定版本的PHP">http://Oliverlyc.github.io/2017/10/01/CentOS系统下安装指定版本的PHP/</a>
             <span class="copy-path" data-clipboard-text="原文: http://Oliverlyc.github.io/2017/10/01/CentOS系统下安装指定版本的PHP/　　作者: Oliver Lin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -455,7 +456,7 @@ short_open_tag = ON #在229行支持php短标签
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/10/06/php-artisan-migrate-执行问题/">php artisan migrate 执行问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/04/MySQL用户管理和权限设置/">MySQL用户管理和权限设置</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/04/MySQL常用命令行/">MySQL常用命令行</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/02/Linux系统各文件夹结构说明及用途/">Linux系统各文件夹结构说明及用途</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/02/CentOS6-5搭建LAMP环境/">CentOS6.5搭建LAMP环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/01/CentOS系统下安装指定版本的PHP/">CentOS系统下安装指定版本的PHP</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/linux添加环境变量/">linux添加环境变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/23/centOS解决-用户不在sudoers文件中/">centOS解决'用户不在sudoers文件中'</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/23/CentOS6-5安装Metasploit/">CentOS6.5安装Metasploit</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/19/数据库事务的4大特性/">数据库事务的4大特性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/16/php配置json文件/">php配置json文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/16/Git常用命令/">Git常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/19/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/10/26/win10配置JAVA环境/">win10配置JAVA环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/06/php-artisan-migrate-执行问题/">php artisan migrate 执行问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/04/MySQL用户管理和权限设置/">MySQL用户管理和权限设置</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/04/MySQL常用命令行/">MySQL常用命令行</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/02/Linux系统各文件夹结构说明及用途/">Linux系统各文件夹结构说明及用途</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/02/CentOS6-5搭建LAMP环境/">CentOS6.5搭建LAMP环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/01/CentOS系统下安装指定版本的PHP/">CentOS系统下安装指定版本的PHP</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/linux添加环境变量/">linux添加环境变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/23/centOS解决-用户不在sudoers文件中/">centOS解决'用户不在sudoers文件中'</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/23/CentOS6-5安装Metasploit/">CentOS6.5安装Metasploit</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/19/数据库事务的4大特性/">数据库事务的4大特性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/16/php配置json文件/">php配置json文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/16/Git常用命令/">Git常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/19/hello-world/">Hello World</a></li></ul>
 
 
 
