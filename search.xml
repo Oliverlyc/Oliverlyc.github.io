@@ -415,8 +415,9 @@ short_open_tag = ON #在229行支持php短标签
 -A INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT #允许80端口通过防火墙   
 -A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT #允许3306端口通过防火墙   
 :wq #保存退出   
-</code></pre><p><code>/etc/init.d/iptables restart</code> //重启防火墙使配置生效</p>
-]]></content>
+</code></pre><p><code>/etc/init.d/iptables restart</code> //重启防火墙使配置生效     </p>
+<h2 id="第五步-安装php组件"><a href="#第五步-安装php组件" class="headerlink" title="第五步:安装php组件"></a>第五步:安装php组件</h2><pre><code>yum install php-mysql php-gd libjpeg* php-imap php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-mcrypt php-bcmath php-mhash libmcrypt
+</code></pre>]]></content>
       
         <categories>
             
