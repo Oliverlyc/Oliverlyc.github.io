@@ -31,7 +31,7 @@
       
         <categories>
             
-            <category> Note </category>
+            <category> note </category>
             
         </categories>
         
@@ -619,7 +619,7 @@ display_errors = On #打开错误提示
       
         <categories>
             
-            <category> Note </category>
+            <category> note </category>
             
         </categories>
         
