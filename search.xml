@@ -3,6 +3,14 @@
   
     
     <entry>
+      <title><![CDATA[对于mysqli_fetch_(mysqli_resule::fetch_)函数的理解]]></title>
+      <url>/2017/11/06/%E5%AF%B9%E4%BA%8Emysqli-fetch-mysqli-resule-fetch-%E5%87%BD%E6%95%B0%E7%9A%84%E7%90%86%E8%A7%A3/</url>
+      <content type="html"></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[win10配置JAVA环境]]></title>
       <url>/2017/10/26/win10%E9%85%8D%E7%BD%AEJAVA%E7%8E%AF%E5%A2%83/</url>
       <content type="html"><![CDATA[<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">Java的下载链接</a>，本教程默认安装路径：<code>C:\ProgramFiles\Java</code>。<br><a id="more"></a></p>

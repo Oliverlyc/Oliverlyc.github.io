@@ -15,37 +15,13 @@
 
 
 
-<meta name="description" content="用户基本操作
-注:设置权限时必须给出以下信息   
-
-要授予的权健被授予访问权限的数据库或表用户名     
-
-grant和revoke可以在几个层次上控制访问权限     
-
-所有权限使用 grant all 和 revoke all整个数据库 使用*特定库和表 使用on basename.table特定列特定存储过程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL用户管理和权限设置">
-<meta property="og:url" content="http://Oliverlyc.github.io/2017/10/04/MySQL用户管理和权限设置/index.html">
+<meta property="og:title" content="对于mysqli_fetch_(mysqli_resule::fetch_)函数的理解">
+<meta property="og:url" content="http://Oliverlyc.github.io/2017/11/06/对于mysqli-fetch-mysqli-resule-fetch-函数的理解/index.html">
 <meta property="og:site_name" content="Oliver">
-<meta property="og:description" content="用户基本操作
-注:设置权限时必须给出以下信息   
-
-要授予的权健被授予访问权限的数据库或表用户名     
-
-grant和revoke可以在几个层次上控制访问权限     
-
-所有权限使用 grant all 和 revoke all整个数据库 使用*特定库和表 使用on basename.table特定列特定存储过程">
-<meta property="og:updated_time" content="2017-10-16T09:27:52.071Z">
+<meta property="og:updated_time" content="2017-11-06T08:05:33.322Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL用户管理和权限设置">
-<meta name="twitter:description" content="用户基本操作
-注:设置权限时必须给出以下信息   
-
-要授予的权健被授予访问权限的数据库或表用户名     
-
-grant和revoke可以在几个层次上控制访问权限     
-
-所有权限使用 grant all 和 revoke all整个数据库 使用*特定库和表 使用on basename.table特定列特定存储过程">
+<meta name="twitter:title" content="对于mysqli_fetch_(mysqli_resule::fetch_)函数的理解">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -77,7 +53,7 @@ grant和revoke可以在几个层次上控制访问权限
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>MySQL用户管理和权限设置 | Oliver</title>
+<title>对于mysqli_fetch_(mysqli_resule::fetch_)函数的理解 | Oliver</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -281,11 +257,11 @@ grant和revoke可以在几个层次上控制访问权限
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-MySQL用户管理和权限设置" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-对于mysqli-fetch-mysqli-resule-fetch-函数的理解" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/10/04/MySQL用户管理和权限设置/" class="article-date">
-      <time datetime="2017-10-04T15:56:54.000Z" itemprop="datePublished">2017-10-04</time>
+      <a href="/2017/11/06/对于mysqli-fetch-mysqli-resule-fetch-函数的理解/" class="article-date">
+      <time datetime="2017-11-06T08:05:33.000Z" itemprop="datePublished">2017-11-06</time>
 </a>
 
 
@@ -300,7 +276,7 @@ grant和revoke可以在几个层次上控制访问权限
         
   
     <h1 class="article-title" itemprop="name">
-      MySQL用户管理和权限设置
+      对于mysqli_fetch_(mysqli_resule::fetch_)函数的理解
     </h1>
   
 
@@ -308,16 +284,8 @@ grant和revoke可以在几个层次上控制访问权限
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/数据库/">数据库</a>
-    </div>
-
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -325,35 +293,7 @@ grant和revoke可以在几个层次上控制访问权限
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="用户基本操作"><a href="#用户基本操作" class="headerlink" title="用户基本操作"></a>用户基本操作</h2><blockquote>
-<p>注:设置权限时必须给出以下信息   </p>
-<blockquote>
-<p>要授予的权健<br>被授予访问权限的数据库或表<br>用户名     </p>
-</blockquote>
-<p>grant和revoke可以在几个层次上控制访问权限     </p>
-<blockquote>
-<p>所有权限使用 grant all 和 revoke all<br>整个数据库 使用*<br>特定库和表 使用on basename.table<br>特定列<br>特定存储过程<br><a id="more"></a></p>
-<h3 id="创建用户并授权"><a href="#创建用户并授权" class="headerlink" title="创建用户并授权"></a>创建用户并授权</h3><p><code>mysql&gt; grant 权限 on 数据库.表 to 用户名@登录主机 identified by &quot;密码&quot;;</code><br>权限:<br>普通用户操作数据权限: select, delete, update, insert     </p>
-<p>数据库开发人员: create, drop, show, alter, index(索引), all privileges(所有权限)  </p>
-</blockquote>
-<p>数据库.表:     </p>
-<blockquote>
-<p>所有数据库中所有表: *.*<br>特定数据库中特定表: basename.table   </p>
-</blockquote>
-<p>登录主机:  </p>
-<blockquote>
-<p>所有非本地主机: @’%’ (不包括localhost, <strong>慎用</strong>);<br>某个局域网下所有子网用户: @’192.168.0.%’;   </p>
-</blockquote>
-</blockquote>
-<p><code>mysql&gt; flush privileges</code> //更新权限     </p>
-<h3 id="回收权限"><a href="#回收权限" class="headerlink" title="回收权限"></a>回收权限</h3><blockquote>
-<p>将 grant 替换为 revoke;</p>
-<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p><code>mysql&gt; use mysql;</code> //进入mysql库<br><code>mysql&gt; delete from user where User=&#39;用户名&#39; and Host=&#39;主机&#39;</code> //删除用户<br><code>mysql&gt; drop user 用户名</code> //这个命令也可以 mysql5之前的版本需要先revoke删除用户权限, 再删除用户<br><code>flush privileges</code> //更新权限   </p>
-<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><p><code>mysql&gt; update user set password=password(&#39;XXXXX&#39;) where User=&#39;用户名&#39; (and Host=&#39;主机&#39;);</code>  //修改特定用户(特定主机)的密码     </p>
-</blockquote>
-<p><code>mysql&gt; show grants for 用户名;</code> //查看用户权限   </p>
-<p><code>mysql&gt; rename user 旧名字 to 新名字;</code> //mysql5之后可以使用, 之前的版本需要使用 <code>update</code> 更新表 </p>
-
+        
       
     </div>
     
@@ -361,13 +301,13 @@ grant和revoke可以在几个层次上控制访问权限
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/10/04/MySQL用户管理和权限设置/">MySQL用户管理和权限设置</a></p>
+        <p><span>本文标题:</span><a href="/2017/11/06/对于mysqli-fetch-mysqli-resule-fetch-函数的理解/">对于mysqli_fetch_(mysqli_resule::fetch_)函数的理解</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Oliver Lin</a></p>
-        <p><span>发布时间:</span>2017-10-04, 23:56:54</p>
-        <p><span>最后更新:</span>2017-10-16, 17:27:52</p>
+        <p><span>发布时间:</span>2017-11-06, 16:05:33</p>
+        <p><span>最后更新:</span>2017-11-06, 16:05:33</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/10/04/MySQL用户管理和权限设置/" title="MySQL用户管理和权限设置">http://Oliverlyc.github.io/2017/10/04/MySQL用户管理和权限设置/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://Oliverlyc.github.io/2017/10/04/MySQL用户管理和权限设置/　　作者: Oliver Lin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/11/06/对于mysqli-fetch-mysqli-resule-fetch-函数的理解/" title="对于mysqli_fetch_(mysqli_resule::fetch_)函数的理解">http://Oliverlyc.github.io/2017/11/06/对于mysqli-fetch-mysqli-resule-fetch-函数的理解/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://Oliverlyc.github.io/2017/11/06/对于mysqli-fetch-mysqli-resule-fetch-函数的理解/　　作者: Oliver Lin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -379,16 +319,10 @@ grant和revoke可以在几个层次上控制访问权限
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/10/06/php-artisan-migrate-执行问题/">
-                    php artisan migrate 执行问题
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/10/04/MySQL常用命令行/">
-                    MySQL常用命令行
+                <a href="/2017/10/26/win10配置JAVA环境/">
+                    win10配置JAVA环境
                 </a>
             </div>
         
@@ -400,7 +334,7 @@ grant和revoke可以在几个层次上控制访问权限
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#用户基本操作"><span class="toc-number">1.</span> <span class="toc-text">用户基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建用户并授权"><span class="toc-number">1.1.</span> <span class="toc-text">创建用户并授权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回收权限"><span class="toc-number">1.2.</span> <span class="toc-text">回收权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除用户"><span class="toc-number">1.3.</span> <span class="toc-text">删除用户</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他命令"><span class="toc-number">2.</span> <span class="toc-text">其他命令</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -436,7 +370,7 @@ grant和revoke可以在几个层次上控制访问权限
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"MySQL用户管理和权限设置　| Oliver　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"对于mysqli_fetch_(mysqli_resule::fetch_)函数的理解　| Oliver　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -456,15 +390,13 @@ grant和revoke可以在几个层次上控制访问权限
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/10/06/php-artisan-migrate-执行问题/" title="上一篇: php artisan migrate 执行问题">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/10/04/MySQL常用命令行/" title="下一篇: MySQL常用命令行">
+            <a href="/2017/10/26/win10配置JAVA环境/" title="下一篇: win10配置JAVA环境">
                 <i class="fa fa-angle-right"></i>
             </a>
         

@@ -15,37 +15,12 @@
 
 
 
-<meta name="description" content="用户基本操作
-注:设置权限时必须给出以下信息   
-
-要授予的权健被授予访问权限的数据库或表用户名     
-
-grant和revoke可以在几个层次上控制访问权限     
-
-所有权限使用 grant all 和 revoke all整个数据库 使用*特定库和表 使用on basename.table特定列特定存储过程">
-<meta property="og:type" content="article">
-<meta property="og:title" content="MySQL用户管理和权限设置">
-<meta property="og:url" content="http://Oliverlyc.github.io/2017/10/04/MySQL用户管理和权限设置/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Oliver">
+<meta property="og:url" content="http://Oliverlyc.github.io/archives/2017/11/index.html">
 <meta property="og:site_name" content="Oliver">
-<meta property="og:description" content="用户基本操作
-注:设置权限时必须给出以下信息   
-
-要授予的权健被授予访问权限的数据库或表用户名     
-
-grant和revoke可以在几个层次上控制访问权限     
-
-所有权限使用 grant all 和 revoke all整个数据库 使用*特定库和表 使用on basename.table特定列特定存储过程">
-<meta property="og:updated_time" content="2017-10-16T09:27:52.071Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL用户管理和权限设置">
-<meta name="twitter:description" content="用户基本操作
-注:设置权限时必须给出以下信息   
-
-要授予的权健被授予访问权限的数据库或表用户名     
-
-grant和revoke可以在几个层次上控制访问权限     
-
-所有权限使用 grant all 和 revoke all整个数据库 使用*特定库和表 使用on basename.table特定列特定存储过程">
+<meta name="twitter:title" content="Oliver">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -77,7 +52,7 @@ grant和revoke可以在几个层次上控制访问权限
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>MySQL用户管理和权限设置 | Oliver</title>
+<title>Archives: 2017/11 | Oliver</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -87,8 +62,8 @@ grant和revoke可以在几个层次上控制访问权限
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: true,
-        isArchive: false,
+        isPost: false,
+        isArchive: true,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -281,203 +256,52 @@ grant和revoke可以在几个层次上控制访问权限
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-MySQL用户管理和权限设置" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2017/10/04/MySQL用户管理和权限设置/" class="article-date">
-      <time datetime="2017-10-04T15:56:54.000Z" itemprop="datePublished">2017-10-04</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2017/11/06/对于mysqli-fetch-mysqli-resule-fetch-函数的理解/" class="archive-article-date">
+      <time datetime="2017-11-06T08:05:33.000Z" itemprop="datePublished">11-06</time>
 </a>
 
 
-    </div>
+        </div>
+         
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      MySQL用户管理和权限设置
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/11/06/对于mysqli-fetch-mysqli-resule-fetch-函数的理解/">对于mysqli_fetch_(mysqli_resule::fetch_)函数的理解</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/数据库/">数据库</a>
-    </div>
-
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <h2 id="用户基本操作"><a href="#用户基本操作" class="headerlink" title="用户基本操作"></a>用户基本操作</h2><blockquote>
-<p>注:设置权限时必须给出以下信息   </p>
-<blockquote>
-<p>要授予的权健<br>被授予访问权限的数据库或表<br>用户名     </p>
-</blockquote>
-<p>grant和revoke可以在几个层次上控制访问权限     </p>
-<blockquote>
-<p>所有权限使用 grant all 和 revoke all<br>整个数据库 使用*<br>特定库和表 使用on basename.table<br>特定列<br>特定存储过程<br><a id="more"></a></p>
-<h3 id="创建用户并授权"><a href="#创建用户并授权" class="headerlink" title="创建用户并授权"></a>创建用户并授权</h3><p><code>mysql&gt; grant 权限 on 数据库.表 to 用户名@登录主机 identified by &quot;密码&quot;;</code><br>权限:<br>普通用户操作数据权限: select, delete, update, insert     </p>
-<p>数据库开发人员: create, drop, show, alter, index(索引), all privileges(所有权限)  </p>
-</blockquote>
-<p>数据库.表:     </p>
-<blockquote>
-<p>所有数据库中所有表: *.*<br>特定数据库中特定表: basename.table   </p>
-</blockquote>
-<p>登录主机:  </p>
-<blockquote>
-<p>所有非本地主机: @’%’ (不包括localhost, <strong>慎用</strong>);<br>某个局域网下所有子网用户: @’192.168.0.%’;   </p>
-</blockquote>
-</blockquote>
-<p><code>mysql&gt; flush privileges</code> //更新权限     </p>
-<h3 id="回收权限"><a href="#回收权限" class="headerlink" title="回收权限"></a>回收权限</h3><blockquote>
-<p>将 grant 替换为 revoke;</p>
-<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p><code>mysql&gt; use mysql;</code> //进入mysql库<br><code>mysql&gt; delete from user where User=&#39;用户名&#39; and Host=&#39;主机&#39;</code> //删除用户<br><code>mysql&gt; drop user 用户名</code> //这个命令也可以 mysql5之前的版本需要先revoke删除用户权限, 再删除用户<br><code>flush privileges</code> //更新权限   </p>
-<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><p><code>mysql&gt; update user set password=password(&#39;XXXXX&#39;) where User=&#39;用户名&#39; (and Host=&#39;主机&#39;);</code>  //修改特定用户(特定主机)的密码     </p>
-</blockquote>
-<p><code>mysql&gt; show grants for 用户名;</code> //查看用户权限   </p>
-<p><code>mysql&gt; rename user 旧名字 to 新名字;</code> //mysql5之后可以使用, 之前的版本需要使用 <code>update</code> 更新表 </p>
 
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/10/04/MySQL用户管理和权限设置/">MySQL用户管理和权限设置</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Oliver Lin</a></p>
-        <p><span>发布时间:</span>2017-10-04, 23:56:54</p>
-        <p><span>最后更新:</span>2017-10-16, 17:27:52</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/10/04/MySQL用户管理和权限设置/" title="MySQL用户管理和权限设置">http://Oliverlyc.github.io/2017/10/04/MySQL用户管理和权限设置/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://Oliverlyc.github.io/2017/10/04/MySQL用户管理和权限设置/　　作者: Oliver Lin" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
-    </div>
-
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/10/06/php-artisan-migrate-执行问题/">
-                    php artisan migrate 执行问题
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/10/04/MySQL常用命令行/">
-                    MySQL常用命令行
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#用户基本操作"><span class="toc-number">1.</span> <span class="toc-text">用户基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建用户并授权"><span class="toc-number">1.1.</span> <span class="toc-text">创建用户并授权</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回收权限"><span class="toc-number">1.2.</span> <span class="toc-text">回收权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除用户"><span class="toc-number">1.3.</span> <span class="toc-text">删除用户</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他命令"><span class="toc-number">2.</span> <span class="toc-text">其他命令</span></a></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+          
         </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"MySQL用户管理和权限设置　| Oliver　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 
     
 
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2017/10/06/php-artisan-migrate-执行问题/" title="上一篇: php artisan migrate 执行问题">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2017/10/04/MySQL常用命令行/" title="下一篇: MySQL常用命令行">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/06/对于mysqli-fetch-mysqli-resule-fetch-函数的理解/">对于mysqli_fetch_(mysqli_resule::fetch_)函数的理解</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/26/win10配置JAVA环境/">win10配置JAVA环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/06/php-artisan-migrate-执行问题/">php artisan migrate 执行问题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/04/MySQL用户管理和权限设置/">MySQL用户管理和权限设置</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/04/MySQL常用命令行/">MySQL常用命令行</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/02/Linux系统各文件夹结构说明及用途/">Linux系统各文件夹结构说明及用途</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/02/CentOS6-5搭建LAMP环境/">CentOS6.5搭建LAMP环境</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/01/CentOS系统下安装指定版本的PHP/">CentOS系统下安装指定版本的PHP</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/30/linux添加环境变量/">linux添加环境变量</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/23/centOS解决-用户不在sudoers文件中/">centOS解决'用户不在sudoers文件中'</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/23/CentOS6-5安装Metasploit/">CentOS6.5安装Metasploit</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/19/数据库事务的4大特性/">数据库事务的4大特性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/16/php配置json文件/">php配置json文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/16/Git常用命令/">Git常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/19/hello-world/">Hello World</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
 </div>
       <footer id="footer">
     <div class="outer">
