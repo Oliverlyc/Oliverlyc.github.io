@@ -3,6 +3,37 @@
   
     
     <entry>
+      <title><![CDATA[防止sQL注入的几种方法]]></title>
+      <url>/2017/12/02/%E9%98%B2%E6%AD%A2sQL%E6%B3%A8%E5%85%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
+      <content type="html"><![CDATA[<p>SQL注入就是通过<strong>Web表单提交</strong>、<strong>所输入的域名</strong>、<strong>页面请求</strong>从中插入查询字符串，从而达到执行恶意SQL语句的命令。</p>
+<h3 id="防止SQL注入的方法"><a href="#防止SQL注入的方法" class="headerlink" title="防止SQL注入的方法"></a>防止SQL注入的方法</h3><ol>
+<li>使用<a href="http://www.runoob.com/regexp/regexp-tutorial.html" target="_blank" rel="external"><strong>正则表达式</strong></a>来过滤字符串    </li>
+<li>使用<a href="http://php.net/manual/zh/function.htmlspecialchars.php" target="_blank" rel="external">htmlspecialchars()</a>函数将特殊字符转换为HTML实体    </li>
+<li>PHP预处理    <blockquote>
+<p>不要依赖前端js的过滤，因为firebug会禁用js<br>最好不要使用root用户连接数据库</p>
+</blockquote>
+</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> 数据库 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+            <tag> PHP </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[对于mysqli_fetch_(mysqli_resule::fetch_)函数的理解]]></title>
       <url>/2017/11/06/%E5%AF%B9%E4%BA%8Emysqli-fetch-mysqli-resule-fetch-%E5%87%BD%E6%95%B0%E7%9A%84%E7%90%86%E8%A7%A3/</url>
       <content type="html"></content>
