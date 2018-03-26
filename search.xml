@@ -641,9 +641,9 @@ display_errors = On #打开错误提示
         
         <tags>
             
-            <tag> PHP </tag>
-            
             <tag> json </tag>
+            
+            <tag> PHP </tag>
             
         </tags>
         
