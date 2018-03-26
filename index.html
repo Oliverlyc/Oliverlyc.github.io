@@ -263,6 +263,69 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Laravel5-5中实现JWT认证" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/03/26/Laravel5-5中实现JWT认证/" class="article-date">
+      <time datetime="2018-03-26T13:04:45.000Z" itemprop="datePublished">2018-03-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/26/Laravel5-5中实现JWT认证/">Laravel5.5中实现JWT认证</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/Categories/PHP/">PHP</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Tags/Laravel/">Laravel</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-防止sQL注入的几种方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -556,15 +619,36 @@ could not find driver
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h2 id="用户基本操作"><a href="#用户基本操作" class="headerlink" title="用户基本操作"></a>用户基本操作</h2><blockquote>
+        <a id="more"></a>
+<h2 id="用户基本操作"><a href="#用户基本操作" class="headerlink" title="用户基本操作"></a>用户基本操作</h2><blockquote>
 <p>注:设置权限时必须给出以下信息   </p>
 <blockquote>
 <p>要授予的权健<br>被授予访问权限的数据库或表<br>用户名     </p>
 </blockquote>
 <p>grant和revoke可以在几个层次上控制访问权限     </p>
 <blockquote>
-<p>所有权限使用 grant all 和 revoke all<br>整个数据库 使用*<br>特定库和表 使用on basename.table<br>特定列<br>特定存储过程<br>
-          
+<p>所有权限使用 grant all 和 revoke all<br>整个数据库 使用*<br>特定库和表 使用on basename.table<br>特定列<br>特定存储过程</p>
+<h3 id="创建用户并授权"><a href="#创建用户并授权" class="headerlink" title="创建用户并授权"></a>创建用户并授权</h3><p><code>mysql&gt; grant 权限 on 数据库.表 to 用户名@登录主机 identified by &quot;密码&quot;;</code><br>权限:<br>普通用户操作数据权限: select, delete, update, insert     </p>
+<p>数据库开发人员: create, drop, show, alter, index(索引), all privileges(所有权限)  </p>
+</blockquote>
+<p>数据库.表:     </p>
+<blockquote>
+<p>所有数据库中所有表: *.*<br>特定数据库中特定表: basename.table   </p>
+</blockquote>
+<p>登录主机:  </p>
+<blockquote>
+<p>所有非本地主机: @’%’ (不包括localhost, <strong>慎用</strong>);<br>某个局域网下所有子网用户: @’192.168.0.%’;   </p>
+</blockquote>
+</blockquote>
+<p><code>mysql&gt; flush privileges</code> //更新权限     </p>
+<h3 id="回收权限"><a href="#回收权限" class="headerlink" title="回收权限"></a>回收权限</h3><blockquote>
+<p>将 grant 替换为 revoke;</p>
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p><code>mysql&gt; use mysql;</code> //进入mysql库<br><code>mysql&gt; delete from user where User=&#39;用户名&#39; and Host=&#39;主机&#39;</code> //删除用户<br><code>mysql&gt; drop user 用户名</code> //这个命令也可以 mysql5之前的版本需要先revoke删除用户权限, 再删除用户<br><code>flush privileges</code> //更新权限   </p>
+<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><p><code>mysql&gt; update user set password=password(&#39;XXXXX&#39;) where User=&#39;用户名&#39; (and Host=&#39;主机&#39;);</code>  //修改特定用户(特定主机)的密码     </p>
+</blockquote>
+<p><code>mysql&gt; show grants for 用户名;</code> //查看用户权限   </p>
+<p><code>mysql&gt; rename user 旧名字 to 新名字;</code> //mysql5之后可以使用, 之前的版本需要使用 <code>update</code> 更新表 </p>
+
       
     </div>
     
@@ -581,10 +665,6 @@ could not find driver
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Tags/MySQL/">MySQL</a></li></ul>
     </div>
 
-      
-        <p class="article-more-link">
-          <a href="/2017/10/04/MySQL用户管理和权限设置/#more">阅读全文 >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -740,82 +820,9 @@ could not find driver
 
 
   
-    <article id="post-CentOS6-5搭建LAMP环境" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/10/02/CentOS6-5搭建LAMP环境/" class="article-date">
-      <time datetime="2017-10-01T16:51:13.000Z" itemprop="datePublished">2017-10-02</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/02/CentOS6-5搭建LAMP环境/">CentOS6.5搭建LAMP环境</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="关闭SELINUX"><a href="#关闭SELINUX" class="headerlink" title="关闭SELINUX"></a>关闭SELINUX</h2><p><code># vim /etc/selinux/config</code>     </p>
-<pre><code>#SELINUX=ecforcing //注释掉    
-#SELINUXTYPE=targeted //注释掉
-SELINUX=disabled //增加
-:wq! //保存退出
-</code></pre><p><code># shutdown -r now</code> //重启系统<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/Categories/PHP/">PHP</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Tags/Apache/">Apache</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Tags/CentOS/">CentOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/Tags/MySQL/">MySQL</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/10/02/CentOS6-5搭建LAMP环境/#more">阅读全文 >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
@@ -824,7 +831,7 @@ SELINUX=disabled //增加
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2017 Oliver Lin
+                2017-2018 Oliver Lin
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>

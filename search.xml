@@ -3,6 +3,26 @@
   
     
     <entry>
+      <title><![CDATA[Laravel5.5中实现JWT认证]]></title>
+      <url>/2018/03/26/Laravel5-5%E4%B8%AD%E5%AE%9E%E7%8E%B0JWT%E8%AE%A4%E8%AF%81/</url>
+      <content type="html"></content>
+      
+        <categories>
+            
+            <category> PHP </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Laravel </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[防止sQL注入的几种方法]]></title>
       <url>/2017/12/02/%E9%98%B2%E6%AD%A2sQL%E6%B3%A8%E5%85%A5%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/</url>
       <content type="html"><![CDATA[<p>SQL注入就是通过<strong>Web表单提交</strong>、<strong>所输入的域名</strong>、<strong>页面请求</strong>从中插入查询字符串，从而达到执行恶意SQL语句的命令。</p>
@@ -102,14 +122,15 @@ could not find driver
     <entry>
       <title><![CDATA[MySQL用户管理和权限设置]]></title>
       <url>/2017/10/04/MySQL%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E5%92%8C%E6%9D%83%E9%99%90%E8%AE%BE%E7%BD%AE/</url>
-      <content type="html"><![CDATA[<h2 id="用户基本操作"><a href="#用户基本操作" class="headerlink" title="用户基本操作"></a>用户基本操作</h2><blockquote>
+      <content type="html"><![CDATA[<a id="more"></a>
+<h2 id="用户基本操作"><a href="#用户基本操作" class="headerlink" title="用户基本操作"></a>用户基本操作</h2><blockquote>
 <p>注:设置权限时必须给出以下信息   </p>
 <blockquote>
 <p>要授予的权健<br>被授予访问权限的数据库或表<br>用户名     </p>
 </blockquote>
 <p>grant和revoke可以在几个层次上控制访问权限     </p>
 <blockquote>
-<p>所有权限使用 grant all 和 revoke all<br>整个数据库 使用*<br>特定库和表 使用on basename.table<br>特定列<br>特定存储过程<br><a id="more"></a></p>
+<p>所有权限使用 grant all 和 revoke all<br>整个数据库 使用*<br>特定库和表 使用on basename.table<br>特定列<br>特定存储过程</p>
 <h3 id="创建用户并授权"><a href="#创建用户并授权" class="headerlink" title="创建用户并授权"></a>创建用户并授权</h3><p><code>mysql&gt; grant 权限 on 数据库.表 to 用户名@登录主机 identified by &quot;密码&quot;;</code><br>权限:<br>普通用户操作数据权限: select, delete, update, insert     </p>
 <p>数据库开发人员: create, drop, show, alter, index(索引), all privileges(所有权限)  </p>
 </blockquote>
