@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[数据结构学习笔记]]></title>
       <url>/2018/03/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<p>##树的定义<br>树：n&gt;0个节点构成的有限集合。<br>空树：n=0<br>非空树特性：</p>
+      <content type="html"><![CDATA[<h2 id="树的定义"><a href="#树的定义" class="headerlink" title="树的定义"></a>树的定义</h2><p>树：n&gt;0个节点构成的有限集合。<br>空树：n=0<br>非空树特性：</p>
 <ul>
 <li>特殊节点<strong>根</strong>，用<strong>r</strong>表示</li>
 <li>其余节点分为互不相交的有限集，每个集合本身是一条树，成为<strong>子树</strong></li>
